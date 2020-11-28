@@ -1,0 +1,58 @@
+#AboutMeContainer {
+  width: 100%;
+  min-height: calc(100vh - 65px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+}
+
+#AboutMe {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 900px;
+}
+
+#AboutMe .Me {
+  width: 200px;
+  justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 100px;
+}
+
+.technologies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.technologies img {
+  width: 80px;
+  margin: 10px 10px;
+  height: auto;
+}
+
+#AboutMe h1 {
+  margin: 10px 0px;
+  font-size: 3em;
+  color: rgb(240, 240, 240);
+}
+
+#AboutMe p {
+  margin-left: 15px;
+  font-size: 1.2em;
+  color: rgb(158, 158, 158);
+}
+
+@media only screen and (max-width: 1050px) {
+  #AboutMe .Me {
+    width: 100px;
+  }
+}
