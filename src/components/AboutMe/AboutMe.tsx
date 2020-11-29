@@ -21,8 +21,12 @@ export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => (
           and diversifying my education at FullStack Academy. There are many
           other resources I have used including: Harvard's CS50X, Udemy, Youtube
           and Stack Overflow. I am extremely passionate about this field, and
-          determined to grow and learn more. My skills include:
+          determined to grow and learn more.
         </p>
+
+        <hr />
+
+        <p>Some of my skills include:</p>
 
         <div className="technologies">
           <img
@@ -49,10 +53,14 @@ export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => (
           <img
             src="https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png"
             alt="mongoDB"
-          ></img>
+          />
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png"
             alt="Typescript"
+          />
+          <img
+            src="https://media.prod.mdn.mozit.cloud/attachments/2019/06/14/16742/4a5f228a878fe1e8de5213bdb599eeef/pwa.png"
+            alt="Progressive Web Apps"
           />
         </div>
       </div>

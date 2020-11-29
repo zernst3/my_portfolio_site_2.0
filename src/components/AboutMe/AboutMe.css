@@ -1,6 +1,7 @@
 #AboutMeContainer {
+  margin-top: 5px;
+  height: calc(100vh - 70px);
   width: 100%;
-  min-height: calc(100vh - 65px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,9 +15,11 @@
   flex-direction: column;
   width: 90%;
   max-width: 900px;
+  overflow: auto;
 }
 
 #AboutMe .Me {
+  overflow: hidden;
   width: 200px;
   justify-self: center;
   margin-left: auto;
@@ -55,4 +58,24 @@
   #AboutMe .Me {
     width: 100px;
   }
+
+  #AboutMe h1 {
+    font-size: 2rem;
+  }
+
+  #AboutMe p {
+    font-size: 0.9rem;
+  }
+}
+
+#AboutMe hr {
+  width: 100%;
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(
+    to left,
+    rgba(117, 117, 117, 0),
+    rgba(117, 117, 117, 0.75),
+    rgba(117, 117, 117, 0)
+  );
 }

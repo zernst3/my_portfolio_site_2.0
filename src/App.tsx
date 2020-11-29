@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import "./App.css";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { Home, Navbar, AboutMe } from "./components";
+import { Home, Navbar, AboutMe, MyProjects } from "./components";
 import { AnimatePresence } from "framer-motion";
 
 const pageVariants = {
@@ -28,7 +28,14 @@ const pageTransition = {
   duration: 1,
 };
 
-function App() {
+const myProjects: Array<any> = [
+  {
+    link: "my-simple-crm",
+    name: "My Simple Crm",
+  },
+];
+
+const App: React.FC<any> = () => {
   const location = useLocation();
   return (
     <React.Fragment>
@@ -59,7 +66,17 @@ function App() {
                 />
               )}
             />
-            <Route exact path="/myprojects" component={Home} />
+            <Route
+              exact
+              path="/myprojects"
+              render={(props: any) => (
+                <MyProjects
+                  {...props}
+                  pageTransition={pageTransition}
+                  pageVariants={pageVariants}
+                />
+              )}
+            />
             <Route exact path="/contactme" component={Home} />
           </Switch>
         </AnimatePresence>
@@ -67,6 +84,6 @@ function App() {
       {/* <Background /> */}
     </React.Fragment>
   );
-}
+};
 
 export default App;

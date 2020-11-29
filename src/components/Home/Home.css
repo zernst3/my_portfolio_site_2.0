@@ -2,7 +2,8 @@
   position: fixed;
   display: flex;
   align-items: center;
-  height: calc(100vh - 65px);
+  margin-top: 5px;
+  height: calc(100vh - 70px);
 }
 
 #Home .textContainer {
