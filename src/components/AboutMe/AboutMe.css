@@ -55,15 +55,11 @@
 
 #AboutMe p {
   margin-left: 15px;
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: rgb(158, 158, 158);
 }
 
 @media only screen and (max-width: 1050px) {
-  #AboutMe .me {
-    width: 100px;
-  }
-
   #AboutMe h1 {
     font-size: 2rem;
   }
@@ -75,7 +71,7 @@
 
 #AboutMe hr {
   width: 100%;
-  margin: 20px 0px;
+  margin: 25px 0px;
   border: 0;
   height: 2px;
   background-image: linear-gradient(

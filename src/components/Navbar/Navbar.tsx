@@ -5,7 +5,6 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Typography,
   Box,
   ListItemIcon,
   ListItemText,
@@ -66,7 +65,6 @@ export const Navbar = () => {
   const [moreInfo, setMoreInfo] = useState(false);
 
   const handleClick = (event: any) => {
-    console.log(event.currentTarget.value);
     setAnchorEl(event.currentTarget);
     if (event.currentTarget.value === "mobileMenu") {
       setMobileMenu(true);
@@ -147,7 +145,7 @@ export const Navbar = () => {
                         activeClassName={classes.sidebarActive}
                         to={item.link}
                       >
-                        <ListItem>
+                        <div className="MuiListItem-root MuiListItem-gutters">
                           <ListItemIcon className={classes.listItem}>
                             {item.listIcon}
                           </ListItemIcon>
@@ -155,7 +153,7 @@ export const Navbar = () => {
                             className={classes.listItem}
                             primary={item.listText}
                           />
-                        </ListItem>
+                        </div>
                       </NavLink>
                     </MenuItem>
                   );
@@ -163,7 +161,6 @@ export const Navbar = () => {
               </Menu>
             </div>
 
-            {/* <Typography variant="h4">Portfolio</Typography> */}
             <div className={classes.moreInfoContainer}>
               <ListItem>
                 <IconButton onClick={handleClick} value="moreInfo">
@@ -191,9 +188,10 @@ export const Navbar = () => {
                     <a
                       className={classes.menuLink}
                       target="_blank"
+                      rel="noreferrer"
                       href="https://1drv.ms/b/s!AoDkHshjwIQilzqXatrnw_x-R2ZO"
                     >
-                      <ListItem>
+                      <div className="MuiListItem-root MuiListItem-gutters">
                         <ListItemIcon className={classes.listItem}>
                           <DescriptionIcon />
                         </ListItemIcon>
@@ -201,16 +199,17 @@ export const Navbar = () => {
                           className={classes.listItem}
                           primary={"My Resume"}
                         />
-                      </ListItem>
+                      </div>
                     </a>
                   </MenuItem>
                   <MenuItem onClick={handleClose}>
                     <a
                       className={classes.menuLink}
                       target="_blank"
+                      rel="noreferrer"
                       href="https://github.com/zernst3"
                     >
-                      <ListItem>
+                      <div className="MuiListItem-root MuiListItem-gutters">
                         <ListItemIcon className={classes.listItem}>
                           <GitHubIcon />
                         </ListItemIcon>
@@ -218,16 +217,17 @@ export const Navbar = () => {
                           className={classes.listItem}
                           primary={"My Github"}
                         />
-                      </ListItem>
+                      </div>
                     </a>
                   </MenuItem>
                   <MenuItem onClick={handleClose}>
                     <a
                       className={classes.menuLink}
                       target="_blank"
+                      rel="noreferrer"
                       href="https://www.linkedin.com/in/zernst3/"
                     >
-                      <ListItem>
+                      <div className="MuiListItem-root MuiListItem-gutters">
                         <ListItemIcon className={classes.listItem}>
                           <LinkedInIcon />
                         </ListItemIcon>
@@ -235,16 +235,17 @@ export const Navbar = () => {
                           className={classes.listItem}
                           primary={"My LinkedIn"}
                         />
-                      </ListItem>
+                      </div>
                     </a>
                   </MenuItem>
                   <MenuItem onClick={handleClose}>
                     <a
                       className={classes.menuLink}
                       target="_blank"
+                      rel="noreferrer"
                       href="https://stackoverflow.com/users/3048047/zernst"
                     >
-                      <ListItem>
+                      <div className="MuiListItem-root MuiListItem-gutters">
                         <ListItemIcon className={classes.listItem}>
                           <LinkIcon />
                         </ListItemIcon>
@@ -252,7 +253,7 @@ export const Navbar = () => {
                           className={classes.listItem}
                           primary={"My Stack Overflow"}
                         />
-                      </ListItem>
+                      </div>
                     </a>
                   </MenuItem>
                 </Menu>

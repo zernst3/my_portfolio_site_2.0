@@ -1,5 +1,12 @@
 import React from "react";
-import { Home, AboutMe, MyProjects, SingleProject, Navbar } from "./components";
+import {
+  Home,
+  AboutMe,
+  MyProjects,
+  SingleProject,
+  Navbar,
+  ContactMe,
+} from "./components";
 import { Route, Switch, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -77,7 +84,18 @@ const Routes: React.FC<any> = () => {
             />
           )}
         />
-        <Route exact path="/contactme" component={Home} />
+
+        <Route
+          exact
+          path="/contactme"
+          render={(props: any) => (
+            <ContactMe
+              {...props}
+              pageTransition={pageTransition}
+              pageVariants={pageVariants}
+            />
+          )}
+        />
       </Switch>
     </AnimatePresence>
   );

@@ -1,0 +1,77 @@
+#ContactMeContainer {
+  margin-top: 5px;
+  height: calc(100vh - 70px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+}
+
+#ContactMe {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 900px;
+  overflow: auto;
+}
+
+#ContactMe h1,
+h3 {
+  margin: auto;
+  font-size: 3em;
+  color: rgb(240, 240, 240);
+}
+
+#ContactMe .form form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#ContactMe .form form label {
+  margin-bottom: 5px;
+  font-size: 1.3em;
+  color: rgb(240, 240, 240);
+}
+
+#ContactMe .form form input,
+textarea {
+  font-size: 1.3em;
+  width: 90%;
+  max-width: 500px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: rgb(240, 240, 240);
+  border-color: rgb(240, 240, 240);
+  border-radius: 10px;
+}
+
+#ContactMe .form form input {
+  text-align: center;
+}
+
+#ContactMe button {
+  font-size: 1.3em;
+  background-color: transparent;
+  color: rgb(240, 240, 240);
+  padding: 10px;
+  margin-bottom: 15px;
+  border-color: rgb(240, 240, 240);
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+#ContactMe button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+#ContactMe .form form input:-webkit-autofill,
+textarea:-webkit-autofill {
+  border: 1px solid rgb(240, 240, 240) !important;
+  -webkit-text-fill-color: rgb(240, 240, 240) !important;
+  -webkit-box-shadow: 0 0 0px 1000px #000000 inset !important;
+  background-color: transparent !important;
+}

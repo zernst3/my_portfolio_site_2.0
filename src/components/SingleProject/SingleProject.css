@@ -70,7 +70,7 @@
 }
 
 .projectInfo p {
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: rgb(240, 240, 240);
 }
 
@@ -92,4 +92,14 @@
 
 .links a:hover {
   background-color: rgba(0, 255, 0, 0.2);
+}
+
+@media only screen and (max-width: 1050px) {
+  #SingleProjectContainer h1 {
+    font-size: 2rem;
+  }
+
+  .projectInfo p {
+    font-size: 0.9rem;
+  }
 }
