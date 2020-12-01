@@ -40,11 +40,12 @@
   flex-direction: column;
 }
 
-.picker button {
+.picker a {
+  text-decoration: none;
+  text-align: center;
   padding: 10px;
-  width: 150px;
   margin: 15px;
-  font-size: 2em;
+  font-size: 1.5em;
   color: rgb(158, 158, 158);
   background-color: transparent;
   border: none;
@@ -54,10 +55,15 @@
   transition: all 0.2s;
 }
 
-.picker .selectedOption {
-  width: 200px;
-  font-size: 2.5em;
+.picker a:hover {
+  cursor: pointer;
+  font-size: 1.7em;
   color: rgb(240, 240, 240);
   border-top: 2px solid rgb(240, 240, 240);
   border-bottom: 2px solid rgb(240, 240, 240);
+}
+
+.picker p,
+.picker h3 {
+  margin: 2px;
 }

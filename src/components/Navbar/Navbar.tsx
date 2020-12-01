@@ -14,6 +14,11 @@ import {
 
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import InfoIcon from "@material-ui/icons/Info";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import DescriptionIcon from "@material-ui/icons/Description";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import LinkIcon from "@material-ui/icons/Link";
 
 import {
   Dehaze,
@@ -57,27 +62,36 @@ const menuItems: Array<listItem> = [
 export const Navbar = () => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const [moreInfo, setMoreInfo] = useState(false);
 
   const handleClick = (event: any) => {
+    console.log(event.currentTarget.value);
     setAnchorEl(event.currentTarget);
+    if (event.currentTarget.value === "mobileMenu") {
+      setMobileMenu(true);
+    } else {
+      setMoreInfo(true);
+    }
   };
 
   const handleClose = () => {
+    setMobileMenu(false);
+    setMoreInfo(false);
     setAnchorEl(null);
   };
 
   return (
     <React.Fragment>
-      <Box component="nav">
-        <AppBar position="static" className={classes.appBarStyles}>
+      <Box component="nav" className={classes.Nav}>
+        <AppBar position="relative" className={classes.appBarStyles}>
           <Toolbar className={classes.toolbarStyles}>
-            <Typography variant="h4">Portfolio</Typography>
-
+            {/* Desktop Navbar */}
             <div className={classes.navbarContainer}>
               {menuItems.map((item, idx) => {
                 return (
                   <NavLink
-                    exact
+                    exact={item.link !== "/myprojects"}
                     activeClassName={classes.navbarActive}
                     to={item.link}
                     key={idx}
@@ -96,13 +110,22 @@ export const Navbar = () => {
               })}
             </div>
 
+            {/* Mobile Navbar */}
             <div className={classes.toggleSlider}>
               <IconButton
                 aria-controls="simple-menu"
                 className={classes.toggleSlider}
                 onClick={handleClick}
+                value="mobileMenu"
               >
-                <Dehaze />
+                <ListItemIcon className={classes.toggleButton}>
+                  <Dehaze />
+                </ListItemIcon>
+
+                <ListItemText
+                  className={classes.toggleButton}
+                  primary={"Nav"}
+                />
               </IconButton>
               <Menu
                 anchorEl={anchorEl}
@@ -112,7 +135,7 @@ export const Navbar = () => {
                   },
                 }}
                 keepMounted
-                open={Boolean(anchorEl)}
+                open={mobileMenu}
                 onClose={handleClose}
               >
                 {menuItems.map((item, idx) => {
@@ -138,6 +161,102 @@ export const Navbar = () => {
                   );
                 })}
               </Menu>
+            </div>
+
+            {/* <Typography variant="h4">Portfolio</Typography> */}
+            <div className={classes.moreInfoContainer}>
+              <ListItem>
+                <IconButton onClick={handleClick} value="moreInfo">
+                  <ListItemIcon className={classes.toggleButton}>
+                    <InfoIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    className={classes.toggleButton}
+                    primary={"More Info"}
+                  />
+                </IconButton>
+
+                <Menu
+                  anchorEl={anchorEl}
+                  PaperProps={{
+                    style: {
+                      backgroundColor: "transparent",
+                    },
+                  }}
+                  keepMounted
+                  open={moreInfo}
+                  onClose={handleClose}
+                >
+                  <MenuItem onClick={handleClose}>
+                    <a
+                      className={classes.menuLink}
+                      target="_blank"
+                      href="https://1drv.ms/b/s!AoDkHshjwIQilzqXatrnw_x-R2ZO"
+                    >
+                      <ListItem>
+                        <ListItemIcon className={classes.listItem}>
+                          <DescriptionIcon />
+                        </ListItemIcon>
+                        <ListItemText
+                          className={classes.listItem}
+                          primary={"My Resume"}
+                        />
+                      </ListItem>
+                    </a>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <a
+                      className={classes.menuLink}
+                      target="_blank"
+                      href="https://github.com/zernst3"
+                    >
+                      <ListItem>
+                        <ListItemIcon className={classes.listItem}>
+                          <GitHubIcon />
+                        </ListItemIcon>
+                        <ListItemText
+                          className={classes.listItem}
+                          primary={"My Github"}
+                        />
+                      </ListItem>
+                    </a>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <a
+                      className={classes.menuLink}
+                      target="_blank"
+                      href="https://www.linkedin.com/in/zernst3/"
+                    >
+                      <ListItem>
+                        <ListItemIcon className={classes.listItem}>
+                          <LinkedInIcon />
+                        </ListItemIcon>
+                        <ListItemText
+                          className={classes.listItem}
+                          primary={"My LinkedIn"}
+                        />
+                      </ListItem>
+                    </a>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <a
+                      className={classes.menuLink}
+                      target="_blank"
+                      href="https://stackoverflow.com/users/3048047/zernst"
+                    >
+                      <ListItem>
+                        <ListItemIcon className={classes.listItem}>
+                          <LinkIcon />
+                        </ListItemIcon>
+                        <ListItemText
+                          className={classes.listItem}
+                          primary={"My Stack Overflow"}
+                        />
+                      </ListItem>
+                    </a>
+                  </MenuItem>
+                </Menu>
+              </ListItem>
             </div>
           </Toolbar>
         </AppBar>

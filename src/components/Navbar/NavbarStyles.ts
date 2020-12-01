@@ -1,6 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
+  Nav: {
+    position: "relative",
+  },
   appBarStyles: {
     backgroundColor: "rgba(20, 20, 20, 0.1)",
     height: "65px",
@@ -10,13 +13,19 @@ export const useStyles = makeStyles((theme) => ({
     "& h4": {
       color: "rgb(240, 240, 240)",
     },
+    "& button": {
+      borderRadius: "0px",
+      borderBottom: "1px solid transparent",
+    },
+    "& button:hover": {
+      borderBottom: "1px solid rgb(240, 240, 240)",
+    },
   },
   listItem: {
     color: "rgb(240, 240, 240)",
   },
   toggleSlider: {
     width: "50px",
-    marginLeft: "auto",
     color: "rgba(255, 255, 255, 1)",
     [theme.breakpoints.up(1050)]: {
       display: "none",
@@ -41,11 +50,10 @@ export const useStyles = makeStyles((theme) => ({
   },
   navbarContainer: {
     margin: "0em 2%",
-    marginLeft: "auto",
     display: "none",
     justifyContent: "space-between",
     width: "20%",
-    minWidth: "700px",
+    minWidth: "750px",
     [theme.breakpoints.up(1050)]: {
       display: "flex",
     },
@@ -59,6 +67,19 @@ export const useStyles = makeStyles((theme) => ({
       "& span": {
         fontSize: "1.3em",
       },
+    },
+  },
+  moreInfoContainer: {
+    marginLeft: "auto",
+  },
+  toggleButton: {
+    color: "rgb(240, 240, 240)",
+    minWidth: "0px",
+    margin: "0px 5px",
+
+    "& span": {
+      fontSize: "0.8em",
+      color: "rgb(240, 240, 240)",
     },
   },
 }));

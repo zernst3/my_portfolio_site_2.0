@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./MyProjects.css";
 import { motion } from "framer-motion";
-
-const options: Array<string> = ["Option 1", "Option 2", "Option 3"];
+import { Link } from "react-router-dom";
+import projectList from "../../ProjectList";
 
 export const MyProjects: React.FC<any> = ({ pageTransition, pageVariants }) => {
-  const [currentSelection, setCurrentSelection] = useState("Option 1");
   return (
     <motion.div
       initial="initial"
@@ -16,19 +15,14 @@ export const MyProjects: React.FC<any> = ({ pageTransition, pageVariants }) => {
     >
       <div id="MyProjectsContainer">
         <div id="MyProjects">
-          <h1>My projects</h1>
+          <h1>My Projects</h1>
           <div id="Projects">
             <div className="picker">
-              {options.map((option, idx) => (
-                <button
-                  className={
-                    option === currentSelection ? "selectedOption" : ""
-                  }
-                  onClick={() => setCurrentSelection(option)}
-                  key={idx}
-                >
-                  {option}
-                </button>
+              {Object.keys(projectList).map((project, idx) => (
+                <Link to={`/myprojects/${project}`} key={idx}>
+                  <h3>{projectList[project].name}</h3>
+                  <p>{projectList[project].shortDescription}</p>
+                </Link>
               ))}
             </div>
           </div>
