@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ContactMe.css";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const [email, setEmail] = useState("");
@@ -8,10 +9,26 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [thankYou, setThankYou] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (evt: any) => {
+  const handleSubmit = async (evt: any) => {
     evt.preventDefault();
-    setThankYou(true);
+    setLoading(true);
+    const { data } = await axios.post("http://localhost:8080/", {
+      email,
+      name,
+      subject,
+      message,
+    });
+    console.log(data);
+    if (data === "Success") {
+      setLoading(false);
+      setThankYou(true);
+    } else {
+      setLoading(false);
+      setError(true);
+    }
   };
 
   return (
@@ -24,7 +41,7 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
     >
       <div id="ContactMeContainer">
         <div id="ContactMe">
-          {!thankYou ? (
+          {!thankYou && !error && !loading ? (
             <React.Fragment>
               <h1>Contact Me</h1>
               <div className="form">
@@ -74,9 +91,17 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                   </button>
                 </form>
               </div>
+              <h3>
+                Or contact me directly at:{" "}
+                <a href="mailto:zernst3@live.com">zernst3@live.com</a>
+              </h3>
             </React.Fragment>
-          ) : (
+          ) : loading ? (
+            <h1>Sending Email...</h1>
+          ) : thankYou ? (
             <h1>Thank you for your message!</h1>
+          ) : (
+            <h1>There has been an error</h1>
           )}
         </div>
       </div>

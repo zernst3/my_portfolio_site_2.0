@@ -130,6 +130,8 @@ export const Navbar = () => {
                 PaperProps={{
                   style: {
                     backgroundColor: "transparent",
+                    backdropFilter: "blur(5px)",
+                    borderRadius: "10px",
                   },
                 }}
                 keepMounted
@@ -178,6 +180,8 @@ export const Navbar = () => {
                   PaperProps={{
                     style: {
                       backgroundColor: "transparent",
+                      backdropFilter: "blur(5px)",
+                      borderRadius: "10px",
                     },
                   }}
                   keepMounted
