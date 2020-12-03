@@ -15,11 +15,16 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const handleSubmit = async (evt: any) => {
     evt.preventDefault();
     setLoading(true);
-    const { data } = await axios.post("http://localhost:8080/", {
-      email,
-      name,
-      subject,
-      message,
+    console.log(email);
+    const { data } = await axios.request({
+      method: "POST",
+      url: `https://zernst-handleemailserver.herokuapp.com/`,
+      data: {
+        email: email,
+        name: name,
+        subject: subject,
+        message: message,
+      },
     });
     console.log(data);
     if (data === "Success") {
