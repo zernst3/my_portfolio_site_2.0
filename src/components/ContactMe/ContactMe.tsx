@@ -51,23 +51,23 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
               <h1>Contact Me</h1>
               <div className="form">
                 <form onSubmit={handleSubmit}>
-                  <label htmlFor="email">Email</label>
-                  <input
-                    id="email"
-                    type="text"
-                    value={email}
-                    onChange={(evt: any) => {
-                      setEmail(evt.target.value);
-                    }}
-                  />
-
-                  <label htmlFor="name">Name</label>
+                  <label htmlFor="name">Your Name</label>
                   <input
                     id="name"
                     type="text"
                     value={name}
                     onChange={(evt: any) => {
                       setName(evt.target.value);
+                    }}
+                  />
+
+                  <label htmlFor="email">Your Email</label>
+                  <input
+                    id="email"
+                    type="text"
+                    value={email}
+                    onChange={(evt: any) => {
+                      setEmail(evt.target.value);
                     }}
                   />
 
