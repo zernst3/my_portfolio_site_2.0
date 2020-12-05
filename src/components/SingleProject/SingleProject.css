@@ -62,10 +62,25 @@
   height: auto;
 }
 
+.slideshow .carousel-slider {
+  height: 100%;
+}
+
 .slideshow .carousel-slider img {
-  max-height: 250px;
+  align-self: center;
+  justify-self: center;
+  max-height: 350px;
   width: auto !important;
   max-width: 100%;
+}
+
+.slide {
+  display: flex;
+}
+
+.slide div {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .slideshow .thumbs-wrapper .thumb {
