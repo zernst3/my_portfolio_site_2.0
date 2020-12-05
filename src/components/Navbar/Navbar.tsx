@@ -43,7 +43,7 @@ const menuItems: Array<listItem> = [
   },
   {
     listIcon: <AssignmentInd />,
-    listText: "About Me",
+    listText: "About",
     link: "/aboutme",
   },
   {

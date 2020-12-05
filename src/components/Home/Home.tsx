@@ -18,7 +18,7 @@ export const Home: React.FC<any> = ({ pageTransition, pageVariants }) => {
             <h1>
               <Typed
                 strings={["Zachary Ernst"]}
-                typeSpeed={40}
+                typeSpeed={30}
                 backSpeed={50}
                 backDelay={2000}
                 loop
@@ -35,6 +35,7 @@ export const Home: React.FC<any> = ({ pageTransition, pageVariants }) => {
                 ]}
                 typeSpeed={40}
                 backSpeed={50}
+                backDelay={2000}
                 loop
               />
             </h3>

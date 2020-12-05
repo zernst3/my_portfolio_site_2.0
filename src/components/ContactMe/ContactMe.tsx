@@ -53,6 +53,8 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                 <form onSubmit={handleSubmit}>
                   <label htmlFor="name">Your Name</label>
                   <input
+                    required
+                    placeholder="Required"
                     id="name"
                     type="text"
                     value={name}
@@ -63,8 +65,10 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
 
                   <label htmlFor="email">Your Email</label>
                   <input
+                    required
+                    placeholder="Required"
                     id="email"
-                    type="text"
+                    type="email"
                     value={email}
                     onChange={(evt: any) => {
                       setEmail(evt.target.value);
@@ -73,6 +77,8 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
 
                   <label htmlFor="subject">Subject</label>
                   <input
+                    required
+                    placeholder="Required"
                     id="subject"
                     type="text"
                     value={subject}
@@ -83,6 +89,8 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
 
                   <label htmlFor="message">Message</label>
                   <textarea
+                    required
+                    placeholder="Required"
                     value={message}
                     rows={4}
                     id="message"
@@ -90,10 +98,23 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                       setMessage(evt.target.value);
                     }}
                   ></textarea>
-
-                  <button color="primary" type="submit">
-                    Submit
-                  </button>
+                  {email.length === 0 ||
+                  name.length === 0 ||
+                  subject.length === 0 ||
+                  message.length === 0 ? (
+                    <button
+                      color="primary"
+                      type="submit"
+                      className={"disabled"}
+                      disabled={true}
+                    >
+                      Submit
+                    </button>
+                  ) : (
+                    <button color="primary" type="submit">
+                      Submit
+                    </button>
+                  )}
                 </form>
               </div>
               <h3>

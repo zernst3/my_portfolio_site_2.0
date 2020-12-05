@@ -25,11 +25,11 @@
 
 #AboutMe .me {
   justify-self: center;
-  margin: 10px auto;
+  margin: 10px auto 20px auto;
 }
 
 #AboutMe .me img {
-  width: 200px;
+  width: 175px;
   background-color: black;
   border: 1px solid rgb(240, 240, 240);
   border-radius: 100px;
@@ -55,7 +55,7 @@
 
 #AboutMe p {
   margin-left: 15px;
-  font-size: 1.3em;
+  font-size: 1.5em;
   color: rgb(158, 158, 158);
 }
 

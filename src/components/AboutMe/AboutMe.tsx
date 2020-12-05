@@ -18,7 +18,7 @@ export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => (
   >
     <div id="AboutMeContainer">
       <div id="AboutMe">
-        <h1>About Me</h1>
+        <h1>About</h1>
         <motion.div
           initial="initial"
           exit="out"

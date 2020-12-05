@@ -3,7 +3,6 @@
   height: calc(100vh - 70px);
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   position: fixed;
@@ -14,12 +13,12 @@
   justify-content: center;
   flex-direction: column;
   width: 90%;
-  max-width: 900px;
+  height: 100%;
+  max-width: 1300px;
   overflow: auto;
 }
 
 #MyProjects h1 {
-  margin: auto;
   font-size: 3em;
   color: rgb(240, 240, 240);
 }
@@ -36,15 +35,15 @@
 }
 
 .picker {
+  margin: auto;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 }
 
 .picker a {
   text-decoration: none;
-  text-align: center;
-  padding: 10px;
-  margin: 15px;
+  text-align: right;
   font-size: 1.5em;
   color: rgb(158, 158, 158);
   background-color: transparent;
@@ -56,8 +55,9 @@
 }
 
 .picker a:hover {
+  transform: scale(1.05);
   cursor: pointer;
-  font-size: 1.7em;
+  margin-right: 30px;
   color: rgb(240, 240, 240);
   border-top: 2px solid rgb(240, 240, 240);
   border-bottom: 2px solid rgb(240, 240, 240);
@@ -66,4 +66,39 @@
 .picker p,
 .picker h3 {
   margin: 2px;
+}
+
+.picker p {
+  font-size: 0.7em;
+  align-self: flex-end;
+}
+
+.picker h3 {
+  font-size: 2.2em;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(240, 240, 240);
+  transition: all 0.4s;
+}
+
+.picker a {
+  margin: 25px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.picker a:hover h3 {
+  color: rgb(240, 240, 240);
+}
+
+@media only screen and (max-width: 1050px) {
+  .picker h3 {
+    font-size: 1.3em;
+  }
+
+  .picker p {
+    font-size: 0.65em;
+    max-width: 300px;
+    margin: 0px;
+  }
 }

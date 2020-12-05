@@ -84,3 +84,13 @@ textarea:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #000000 inset !important;
   background-color: transparent !important;
 }
+
+#ContactMe .disabled {
+  color: rgb(158, 158, 158);
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+#ContactMe .disabled:hover {
+  cursor: not-allowed;
+  background-color: rgba(50, 50, 50, 0.5);
+}

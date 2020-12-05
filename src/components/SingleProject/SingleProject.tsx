@@ -112,7 +112,7 @@ export const SingleProject: React.FC<any> = ({
             className="links"
           >
             {links.map((link, idx) => (
-              <a key={idx} href={link.link}>
+              <a key={idx} href={link.link} target="_blank" rel="noreferrer">
                 {link.type}
               </a>
             ))}
