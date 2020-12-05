@@ -10,7 +10,7 @@
   border-bottom: 2px solid rgb(240, 240, 240);
   padding-bottom: 10px;
   margin-left: 2em;
-  width: 705px;
+  width: 605px;
 }
 
 #Home .text {
@@ -35,10 +35,10 @@
     width: 370px;
   }
   #Home h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   #Home h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
