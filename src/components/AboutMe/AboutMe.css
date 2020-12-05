@@ -57,6 +57,9 @@
   margin-left: 15px;
   font-size: 1.5em;
   color: rgb(158, 158, 158);
+  font-family: "Merriweather", serif;
+  font-weight: 100;
+  line-height: 1.5;
 }
 
 @media only screen and (max-width: 1050px) {
