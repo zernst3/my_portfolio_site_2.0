@@ -21,6 +21,7 @@
 #MyProjects h1 {
   font-size: 3em;
   color: rgb(240, 240, 240);
+  align-self: center;
 }
 
 #Projects {
