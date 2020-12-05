@@ -76,9 +76,10 @@
 
 .picker h3 {
   font-size: 2.2em;
-  color: transparent;
+  /* color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(240, 240, 240);
+  -webkit-text-stroke-color: rgb(240, 240, 240); */
+  color: rgb(158, 158, 158);
   transition: all 0.4s;
 }
 
