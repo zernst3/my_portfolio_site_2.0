@@ -26,10 +26,16 @@
 #ContactMe h3 {
   margin: auto;
   color: rgb(240, 240, 240);
+  font-family: "Merriweather", serif;
+  font-weight: 100;
+  line-height: 1.5;
 }
 
 #ContactMe h3 a {
   color: rgb(240, 240, 240);
+  font-family: "Merriweather", serif;
+  font-weight: 100;
+  line-height: 1.5;
 }
 
 #ContactMe .form form {
@@ -42,6 +48,9 @@
   margin-bottom: 5px;
   font-size: 1.3em;
   color: rgb(240, 240, 240);
+  font-family: "Merriweather", serif;
+  font-weight: 100;
+  line-height: 1.5;
 }
 
 #ContactMe .form form input,
@@ -54,6 +63,9 @@ textarea {
   color: rgb(240, 240, 240);
   border-color: rgb(240, 240, 240);
   border-radius: 5px;
+  font-family: "Merriweather", serif;
+  font-weight: 100;
+  line-height: 1.5;
 }
 
 #ContactMe .form form input {

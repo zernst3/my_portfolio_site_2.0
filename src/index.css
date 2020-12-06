@@ -7,14 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
+/* * {
   font-family: "JetBrains Mono", monospace;
-}
+} */
 
-/* code {
+code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-} */
+}
 
 #root {
   height: 100vh;
