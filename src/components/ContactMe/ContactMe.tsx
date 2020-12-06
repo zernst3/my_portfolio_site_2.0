@@ -134,3 +134,5 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
     </motion.div>
   );
 };
+
+export default ContactMe;

@@ -45,3 +45,5 @@ export const Home: React.FC<any> = ({ pageTransition, pageVariants }) => {
     </motion.div>
   );
 };
+
+export default Home;

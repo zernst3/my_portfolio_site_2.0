@@ -31,3 +31,5 @@ export const MyProjects: React.FC<any> = ({ pageTransition, pageVariants }) => {
     </motion.div>
   );
 };
+
+export default MyProjects;

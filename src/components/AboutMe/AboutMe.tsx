@@ -1,12 +1,6 @@
 import React from "react";
 import "./AboutMe.css";
 import { motion } from "framer-motion";
-import {
-  itemVariants,
-  itemTransition,
-  itemTransition2,
-  itemTransition3,
-} from "../SingleProject/SingleProject";
 
 export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => (
   <motion.div
@@ -19,23 +13,10 @@ export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => (
     <div id="AboutMeContainer">
       <div id="AboutMe">
         <h1>About</h1>
-        <motion.div
-          initial="initial"
-          exit="out"
-          animate="in"
-          variants={itemVariants}
-          transition={itemTransition}
-          className="me"
-        >
+        <div className="me">
           <img src="/Me3.png" alt="Me" />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          exit="out"
-          animate="in"
-          variants={itemVariants}
-          transition={itemTransition2}
-        >
+        </div>
+        <div>
           <p>
             I have been working on developing my skills as a web designer and
             developer since January, 2020. I am currently studying these skills
@@ -44,17 +25,11 @@ export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => (
             Youtube and Stack Overflow. I am extremely passionate about this
             field, and determined to grow and learn more.
           </p>
-        </motion.div>
+        </div>
 
         <hr />
 
-        <motion.div
-          initial="initial"
-          exit="out"
-          animate="in"
-          variants={itemVariants}
-          transition={itemTransition3}
-        >
+        <div>
           <p>Some of my skills include:</p>
 
           <div className="technologies">
@@ -92,8 +67,10 @@ export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => (
               alt="Progressive Web Apps"
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   </motion.div>
 );
+
+export default AboutMe;
