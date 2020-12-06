@@ -55,7 +55,7 @@
 }
 
 #AboutMe p {
-  margin-left: 15px;
+  padding: 10px;
   font-size: 1.5em;
   color: rgb(158, 158, 158);
   font-family: "Merriweather", serif;
