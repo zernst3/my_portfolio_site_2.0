@@ -9,12 +9,12 @@ const Skybox = () => {
   const { scene } = useThree();
   const loader = new CubeTextureLoader();
   const texture = loader.load([
-    "/background/posx.webp",
-    "/background/negx.webp",
-    "/background/posy.webp",
-    "/background/negy.webp",
-    "/background/posz.webp",
-    "/background/negz.webp",
+    "/background/posx.jpg",
+    "/background/negx.jpg",
+    "/background/posy.jpg",
+    "/background/negy.jpg",
+    "/background/posz.jpg",
+    "/background/negz.jpg",
   ]);
 
   scene.background = texture;

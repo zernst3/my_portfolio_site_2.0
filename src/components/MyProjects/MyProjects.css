@@ -30,12 +30,6 @@
   width: 100%;
 }
 
-@media only screen and (max-width: 1050px) {
-  #MyProjects h1 {
-    font-size: 2rem;
-  }
-}
-
 .picker {
   margin: auto;
   display: flex;
@@ -56,6 +50,15 @@
   transition: all 0.2s;
 }
 
+.picker h3 {
+  font-size: 2.2em;
+  /* color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(240, 240, 240); */
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.4s;
+}
+
 .picker a:hover {
   transform: scale(1.05);
   cursor: pointer;
@@ -71,17 +74,8 @@
 }
 
 .picker p {
-  font-size: 0.7em;
+  font-size: 0.8em;
   align-self: flex-end;
-}
-
-.picker h3 {
-  font-size: 2.2em;
-  /* color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(240, 240, 240); */
-  color: rgb(158, 158, 158);
-  transition: all 0.4s;
 }
 
 .picker a {
@@ -95,6 +89,13 @@
 }
 
 @media only screen and (max-width: 1050px) {
+  .picker a,
+  .picker h3 {
+    color: rgb(240, 240, 240);
+  }
+  #MyProjects h1 {
+    font-size: 2rem;
+  }
   .picker h3 {
     font-size: 1.3em;
   }

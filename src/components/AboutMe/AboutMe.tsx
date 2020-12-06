@@ -43,10 +43,11 @@ export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => (
               alt="Redux"
             />
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+              src="https://cdn.iconscout.com/icon/free/png-512/node-js-1174925.png"
               alt="node.js"
             />
             <img
+              className="technologyBackground"
               src="https://www.sohamkamani.com/static/65137ed3c844d05124dcfdab28263c21/6b427/express-routing-logo.png"
               alt="express.js"
             />
@@ -55,6 +56,7 @@ export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => (
               alt="PostgreSQL"
             />
             <img
+              className="technologyBackground"
               src="https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png"
               alt="mongoDB"
             />
