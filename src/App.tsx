@@ -18,6 +18,9 @@ const App: React.FC<any> = () => {
           lowlightColor: 0x3d8c,
           baseColor: 0x162a16,
           blurFactor: 0.5,
+          gyroControls: true,
+          mouseControls: true,
+          touchControls: true,
           zoom: 0.4,
         })
       );
