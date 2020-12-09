@@ -19,7 +19,11 @@ export const MyProjects: React.FC<any> = ({ pageTransition, pageVariants }) => {
           <div id="Projects">
             <div className="picker">
               {Object.keys(projectList).map((project, idx) => (
-                <Link to={`/myprojects/${project}`} key={idx}>
+                <Link
+                  to={`/myprojects/${project}`}
+                  key={idx}
+                  className={idx % 2 === 0 ? "left" : "right"}
+                >
                   <h3>{projectList[project].name}</h3>
                   <p>{projectList[project].shortDescription}</p>
                 </Link>

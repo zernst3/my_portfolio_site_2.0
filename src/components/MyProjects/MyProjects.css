@@ -15,7 +15,7 @@
   flex-direction: column;
   width: 90%;
   height: 100%;
-  max-width: 1300px;
+  max-width: 1000px;
   overflow: auto;
 }
 
@@ -34,20 +34,29 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 }
 
 .picker a {
   text-decoration: none;
-  text-align: right;
   font-size: 1.5em;
   color: rgb(158, 158, 158);
   background-color: transparent;
-  border: none;
   outline: none;
-  border-top: 2px solid transparent;
+  transition: all 0.4s;
+  width: max-content;
+  padding: 0px 10px;
   border-bottom: 2px solid transparent;
-  transition: all 0.2s;
+  border-top: 2px solid transparent;
+}
+
+.right {
+  text-align: right;
+  align-self: flex-end;
+}
+
+.left {
+  text-align: left;
+  align-self: flex-start;
 }
 
 .picker h3 {
@@ -55,27 +64,27 @@
   /* color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(240, 240, 240); */
-  color: rgba(255, 255, 255, 0.6);
-  transition: all 0.4s;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.8s;
 }
 
 .picker a:hover {
-  transform: scale(1.05);
+  transform: scale(1.025);
   cursor: pointer;
-  margin-right: 30px;
   color: rgb(240, 240, 240);
-  border-top: 2px solid rgb(240, 240, 240);
   border-bottom: 2px solid rgb(240, 240, 240);
+  border-top: 2px solid rgb(240, 240, 240);
 }
 
 .picker p,
 .picker h3 {
   margin: 2px;
+
+  text-align: inherit;
 }
 
 .picker p {
   font-size: 0.8em;
-  align-self: flex-end;
 }
 
 .picker a {
