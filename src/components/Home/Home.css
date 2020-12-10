@@ -44,3 +44,16 @@
     font-size: 1.5rem;
   }
 }
+
+@media only screen and (max-width: 410px) {
+  #Home .textContainer {
+    width: 270px;
+  }
+  #Home h1 {
+    font-size: 2rem;
+  }
+
+  #Home h3 {
+    font-size: 1rem;
+  }
+}
