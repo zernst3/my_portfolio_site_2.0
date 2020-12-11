@@ -26,7 +26,6 @@ const App: React.FC<any> = () => {
           skyColor: 0x406940,
           cloudColor: 0x576b52,
           cloudShadowColor: 0xe9faf,
-          zoom: 0.4,
         })
       );
     }

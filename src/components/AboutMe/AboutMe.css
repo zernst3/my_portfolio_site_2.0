@@ -1,6 +1,6 @@
 #AboutMeContainer {
   padding: 10px 0px;
-  height: calc(100vh - 65px);
+  height: 100vh;
   width: 100%;
   display: flex;
   /* justify-content: center; */
