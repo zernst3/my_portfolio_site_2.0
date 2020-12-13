@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
   listItem: {
-    color: "rgb(240, 240, 240)",
+    color: "rgb(240, 240, 240)!important",
   },
   menuLink: {
     textDecoration: "none",

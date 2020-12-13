@@ -6,34 +6,52 @@
   /* justify-content: center; */
   align-items: center;
   flex-direction: column;
-  position: fixed;
-}
-
-#AboutMeContainer * {
-  margin-top: auto;
-  margin-bottom: auto;
+  position: absolute;
+  backdrop-filter: blur(5px);
 }
 
 #AboutMe {
-  padding: 10px;
+  padding: 15px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 95%;
-  max-width: 900px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  height: 95%;
+  /* max-width: 900px; */
+  overflow: hidden;
+  background-color: rgba(41, 70, 70, 0.3);
+  border-radius: 5px;
+}
+
+#AboutMe .infoContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#AboutMe .infoContainer .info {
+  padding: 20px;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: overlay;
+  margin: auto 0;
 }
 
 #AboutMe .me {
-  justify-self: center;
-  margin: 10px auto 20px auto;
+  width: 35%;
+  display: flex;
+  margin: auto 20px;
+  align-self: center;
 }
 
 #AboutMe .me img {
-  width: 175px;
-  background-color: black;
-  border: 1px solid rgb(240, 240, 240);
-  border-radius: 100px;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  height: auto;
+  background-color: transparent;
+  border-radius: 50px;
 }
 
 .technologies {
@@ -42,31 +60,62 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: column;
   /* background-color: rgba(255, 255, 255, 0.2); */
   border-radius: 10px;
+  width: 100%;
 }
 
-.technologies img {
-  width: 80px;
+.technologies .technology {
   margin: 10px 10px;
-  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-#AboutMe h1 {
+.technologies .technology div {
+  display: flex;
+  align-items: inherit;
+  flex-wrap: inherit;
+}
+
+.technologies .technology img {
+  width: auto;
+  height: 50px;
+  margin: 10px 10px;
+}
+
+#AboutMeContainer h1 {
   font-size: 3em;
+}
+
+#AboutMeContainer h1,
+#AboutMe h3 {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  line-height: 1.5;
   color: rgb(240, 240, 240);
   align-self: center;
+  width: 100px;
 }
 
 #AboutMe p {
-  font-size: 1.5em;
+  font-size: 1.4em;
+  margin: 0 auto;
   color: rgb(199, 199, 199);
   font-family: "Merriweather", serif;
   font-weight: 100;
   line-height: 1.5;
+  width: 100%;
+  max-width: 1100px;
 }
 
 @media only screen and (max-width: 1050px) {
+  #AboutMe {
+    flex-direction: column;
+  }
+
   #AboutMe h1 {
     font-size: 2rem;
   }
@@ -76,11 +125,11 @@
   }
 }
 
-.technologyBackground {
+/* .technologyBackground {
   background-color: rgba(255, 255, 255, 1);
   padding: 5px;
   border-radius: 5px;
-}
+} */
 
 #AboutMe hr {
   width: 100%;

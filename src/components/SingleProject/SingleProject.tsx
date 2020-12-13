@@ -7,6 +7,7 @@ import "./SingleProject.css";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { Close } from "../Close/Close";
 
 // export const itemVariants = {
 //   initial: {
@@ -65,16 +66,9 @@ export const SingleProject: React.FC<any> = ({
       transition={pageTransition}
       id="SingleProjectOuterContainer"
     >
-      <div id="Close">
-        <Link className="close" to="/myprojects">
-          <HighlightOffIcon
-            style={{ fontSize: "3rem", color: "rgb(240, 240, 240)" }}
-          />
-        </Link>
-      </div>
       <div id="SingleProjectContainer">
         <div id="SingleProject">
-          <h1>{name}</h1>
+          <h1 className="mobile">{name}</h1>
           <div className="slideshow">
             <Carousel autoPlay interval={5000} infiniteLoop>
               {images.map((image, idx) => (
@@ -96,6 +90,9 @@ export const SingleProject: React.FC<any> = ({
               </a>
             ))}
           </div>
+        </div>
+        <div className="mobile">
+          <Close link={"/myprojects"} />
         </div>
       </div>
     </motion.div>

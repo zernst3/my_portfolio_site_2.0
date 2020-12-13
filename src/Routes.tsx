@@ -1,19 +1,13 @@
 import React from "react";
-import {
-  Home,
-  AboutMe,
-  MyProjects,
-  SingleProject,
-  ContactMe,
-} from "./components";
+import { Home, AboutMe, MyProjects, ContactMe } from "./components";
 import { Route, Switch, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 const pageVariants = {
   initial: {
     opacity: 0,
-    x: "-20vw",
-    scale: 0.5,
+    // x: "50vw",
+    scale: 0.9,
   },
   in: {
     opacity: 1,
@@ -22,14 +16,15 @@ const pageVariants = {
   },
   out: {
     opacity: 0,
+    // x: "-50vw",
     // y: "100vh",
-    // scale: 1.5,
+    scale: 0.9,
   },
 };
 
 const pageTransition = {
-  ease: "anticipate",
-  duration: 1,
+  // ease: "anticipate",
+  duration: 0.2,
 };
 
 const Routes: React.FC<any> = () => {
@@ -60,22 +55,11 @@ const Routes: React.FC<any> = () => {
             />
           )}
         />
+
         <Route
-          exact
           path="/myprojects"
           render={(props: any) => (
             <MyProjects
-              {...props}
-              pageTransition={pageTransition}
-              pageVariants={pageVariants}
-            />
-          )}
-        />
-        <Route
-          exact
-          path="/myprojects/:project"
-          render={(props: any) => (
-            <SingleProject
               {...props}
               pageTransition={pageTransition}
               pageVariants={pageVariants}
