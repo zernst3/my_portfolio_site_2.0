@@ -60,7 +60,7 @@ export const SingleProject: React.FC<any> = ({
   return (
     <motion.div
       initial="initial"
-      exit="out"
+      exit="none"
       animate="in"
       variants={pageVariants}
       transition={pageTransition}

@@ -3,6 +3,7 @@ import "./AboutMe.css";
 import { motion } from "framer-motion";
 import { Close } from "../Close/Close";
 import Accordion from "../Accordion/Accordion";
+import woosh1 from "../../../public/sounds/woosh1.mp3";
 
 const Summary: React.FC<any> = () => (
   <div>
@@ -19,64 +20,65 @@ const Summary: React.FC<any> = () => (
 
 const Skills: React.FC<any> = () => (
   <div>
-    <div className="technologies">
-      <div className="technology">
-        <h3>Front-End:</h3>
-        <div>
-          <img
-            style={{ margin: "0px" }}
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
-            alt="React"
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png"
-            alt="Redux"
-          />
+    <div className="technologiesContainer">
+      <div className="technologies">
+        <div className="technology">
+          <h3>Front-End:</h3>
+          <div>
+            <img
+              style={{ margin: "0px" }}
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+              alt="React"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png"
+              alt="Redux"
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="technology">
-        <h3>Back-End:</h3>
-        <div>
-          {" "}
-          <img
-            src="https://cdn.iconscout.com/icon/free/png-512/node-js-1174925.png"
-            alt="node.js"
-          />
-          <img
-            className="technologyBackground"
-            src="https://www.sohamkamani.com/static/65137ed3c844d05124dcfdab28263c21/6b427/express-routing-logo.png"
-            alt="express.js"
-          />
+        <div className="technology">
+          <h3>Back-End:</h3>
+          <div>
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-512/node-js-1174925.png"
+              alt="node.js"
+            />
+            <img
+              className="technologyBackground"
+              src="https://www.sohamkamani.com/static/65137ed3c844d05124dcfdab28263c21/6b427/express-routing-logo.png"
+              alt="express.js"
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="technology">
-        <h3>Database:</h3>
-        <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png"
-            alt="PostgreSQL"
-          />
-          <img
-            className="technologyBackground"
-            src="https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png"
-            alt="mongoDB"
-          />
+        <div className="technology">
+          <h3>Database:</h3>
+          <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png"
+              alt="PostgreSQL"
+            />
+            <img
+              className="technologyBackground"
+              src="https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png"
+              alt="mongoDB"
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="technology">
-        <h3>Other:</h3>
-        <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png"
-            alt="Typescript"
-          />
-          <img
-            src="https://media.prod.mdn.mozit.cloud/attachments/2019/06/14/16742/4a5f228a878fe1e8de5213bdb599eeef/pwa.png"
-            alt="Progressive Web Apps"
-          />
+        <div className="technology">
+          <h3>Other:</h3>
+          <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png"
+              alt="Typescript"
+            />
+            <img
+              src="https://media.prod.mdn.mozit.cloud/attachments/2019/06/14/16742/4a5f228a878fe1e8de5213bdb599eeef/pwa.png"
+              alt="Progressive Web Apps"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -91,7 +93,7 @@ const MoreDetails: React.FC<any> = () => (
       Steele. By this point I began to understand the fundamentals of HTML and
       CSS development. After this, I had learned about the acclaimed CS50 course
       offered by Harvard for free and began to study the fundamentals of
-      programming in C, as well as some Python (Flask) and Sequel.
+      programming in C, as well as some Python (Flask) and MySQL.
     </p>
 
     <br />

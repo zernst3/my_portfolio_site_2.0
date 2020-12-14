@@ -4,6 +4,7 @@ import Typed from "react-typed";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { useStyles } from "./NavbarStyles";
+import useSound from "use-sound";
 
 import {
   AppBar,
@@ -23,6 +24,8 @@ import LinkIcon from "@material-ui/icons/Link";
 import InfoIcon from "@material-ui/icons/Info";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
+
+const woosh1 = require("../../sounds/woosh1.mp3");
 
 interface listItem {
   listIcon: any;
@@ -52,6 +55,9 @@ export const Home: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const [moreInfo, setMoreInfo] = useState(false);
+  const [playWoosh1]: any = useSound("../../sounds/woosh1.mp3", {
+    volume: 1.0,
+  });
 
   const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
@@ -83,6 +89,7 @@ export const Home: React.FC<any> = ({ pageTransition, pageVariants }) => {
                     activeClassName={"navbarActive"}
                     to={item.link}
                     key={idx}
+                    onClick={playWoosh1}
                   >
                     <ListItem>
                       <ListItemIcon className={"listItem"}>

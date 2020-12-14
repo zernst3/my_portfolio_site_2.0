@@ -46,10 +46,10 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
       transition={pageTransition}
     >
       <div id="ContactMeContainer">
+        <h1>Contact Me</h1>
         <div id="ContactMe">
           {!thankYou && !error && !loading ? (
             <React.Fragment>
-              <h1>Contact Me</h1>
               <div className="form">
                 <form onSubmit={handleSubmit}>
                   <label htmlFor="name">Your Name</label>

@@ -21,7 +21,7 @@
   overflow: auto;
 }
 
-#ContactMe h1 {
+#ContactMeContainer h1 {
   margin: auto;
   font-size: 3em;
   color: rgb(240, 240, 240);
@@ -40,6 +40,10 @@
   font-family: "Merriweather", serif;
   font-weight: 100;
   line-height: 1.5;
+}
+
+#ContactMe .form {
+  margin: auto 0;
 }
 
 #ContactMe .form form {
