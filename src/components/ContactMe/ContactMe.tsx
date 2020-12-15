@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ContactMe.css";
 import { motion } from "framer-motion";
 import axios from "axios";
+import { Close } from "../Close/Close";
 
 export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const [email, setEmail] = useState("");
@@ -46,15 +47,14 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
     >
       <div id="ContactMeContainer">
         <div id="ContactMe">
+          <h1>Contact Me</h1>
           {!thankYou && !error && !loading ? (
             <React.Fragment>
-              <h1>Contact Me</h1>
               <div className="form">
                 <form onSubmit={handleSubmit}>
                   <label htmlFor="name">Your Name</label>
                   <input
                     required
-                    placeholder="Required"
                     id="name"
                     type="text"
                     value={name}
@@ -66,7 +66,6 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                   <label htmlFor="email">Your Email</label>
                   <input
                     required
-                    placeholder="Required"
                     id="email"
                     type="email"
                     value={email}
@@ -78,7 +77,6 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                   <label htmlFor="subject">Subject</label>
                   <input
                     required
-                    placeholder="Required"
                     id="subject"
                     type="text"
                     value={subject}
@@ -90,7 +88,6 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                   <label htmlFor="message">Message</label>
                   <textarea
                     required
-                    placeholder="Required"
                     value={message}
                     rows={4}
                     id="message"
@@ -98,6 +95,7 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                       setMessage(evt.target.value);
                     }}
                   ></textarea>
+                  <h4>*All fields are required</h4>
                   {email.length === 0 ||
                   name.length === 0 ||
                   subject.length === 0 ||
@@ -116,11 +114,11 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                     </button>
                   )}
                 </form>
+                <h3>
+                  Or contact me directly at:{" "}
+                  <a href="mailto:zernst3@live.com">zernst3@live.com</a>
+                </h3>
               </div>
-              <h3>
-                Or contact me directly at:{" "}
-                <a href="mailto:zernst3@live.com">zernst3@live.com</a>
-              </h3>
             </React.Fragment>
           ) : loading ? (
             <h1>Sending Email...</h1>

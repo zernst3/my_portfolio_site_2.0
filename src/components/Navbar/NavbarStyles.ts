@@ -5,7 +5,7 @@ export const useStyles = makeStyles((theme) => ({
     position: "relative",
   },
   appBarStyles: {
-    backgroundColor: "rgba(20, 20, 20, 0.1)",
+    backgroundColor: "rgba(41, 70, 70, 0.5)",
     height: "65px",
   },
   toolbarStyles: {
@@ -18,14 +18,15 @@ export const useStyles = makeStyles((theme) => ({
       borderBottom: "1px solid transparent",
     },
     "& button:hover": {
-      borderBottom: "1px solid rgb(240, 240, 240)",
+      background:
+        "linear-gradient(90deg, rgba(194, 167, 46, 0.7) 0%, rgba(189, 157, 86, 0.5) 51%, rgba(179, 164, 96, 0.3) 100%)",
+      borderRadius: "5px",
     },
   },
   listItem: {
     color: "rgb(240, 240, 240)",
   },
   toggleSlider: {
-    width: "50px",
     color: "rgba(255, 255, 255, 1)",
     [theme.breakpoints.up(1050)]: {
       display: "none",
@@ -41,12 +42,14 @@ export const useStyles = makeStyles((theme) => ({
     height: theme.spacing(16),
   },
   sidebarActive: {
-    backgroundColor: "rgba(15, 12, 46, 1)",
-    border: "1px solid rgb(240, 240, 240)",
-    borderRadius: "10px",
+    background:
+      "linear-gradient(90deg, rgba(194, 167, 46, 0.7) 0%, rgba(189, 157, 86, 0.5) 51%, rgba(179, 164, 96, 0.3) 100%)",
+    borderRadius: "5px",
   },
   navbarActive: {
-    borderBottom: "1px solid rgb(240, 240, 240)",
+    background:
+      "linear-gradient(90deg, rgba(194, 167, 46, 0.7) 0%, rgba(189, 157, 86, 0.5) 51%, rgba(179, 164, 96, 0.3) 100%)",
+    borderRadius: "5px",
   },
   navbarContainer: {
     margin: "0em 2%",
@@ -62,7 +65,9 @@ export const useStyles = makeStyles((theme) => ({
       color: "rgb(240, 240, 240)",
       textDecoration: "none",
       "&:hover": {
-        borderBottom: "1px solid rgb(240, 240, 240)",
+        background:
+          "linear-gradient(90deg, rgba(194, 167, 46, 0.7) 0%, rgba(189, 157, 86, 0.5) 51%, rgba(179, 164, 96, 0.3) 100%)",
+        borderRadius: "5px",
       },
       "& span": {
         fontSize: "1.3em",

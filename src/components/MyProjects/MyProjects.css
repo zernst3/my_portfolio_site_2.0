@@ -1,11 +1,17 @@
 #MyProjectsContainer {
-  margin-top: 5px;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 65px);
   width: 100%;
   display: flex;
+  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
+  backdrop-filter: blur(5px);
+}
+
+#MyProjectsContainer * {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 #MyProjects {
@@ -13,13 +19,14 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 90%;
-  height: 100%;
-  max-width: 1000px;
   overflow: auto;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(41, 70, 70, 0.3);
+  border-radius: 5px;
 }
 
-#MyProjects h1 {
+#MyProjectsContainer h1 {
   font-size: 3em;
   color: rgb(240, 240, 240);
   align-self: center;
@@ -28,30 +35,22 @@
 #Projects {
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.picker {
+#Projects .picker {
+  width: 40%;
   margin: auto;
   display: flex;
   flex-direction: column;
 }
 
-.picker a {
-  text-decoration: none;
-  font-size: 1.5em;
-  color: rgb(158, 158, 158);
-  background-color: transparent;
-  outline: none;
-  transition: all 0.4s;
-  width: max-content;
-  padding: 0px 10px;
-  border-bottom: 2px solid transparent;
-  border-top: 2px solid transparent;
-}
-
-.right {
-  text-align: right;
-  align-self: flex-end;
+#Projects .preview {
+  width: 60%;
+  height: 100%;
+  margin: auto;
 }
 
 .left {
@@ -61,19 +60,55 @@
 
 .picker h3 {
   font-size: 2.2em;
-  /* color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(240, 240, 240); */
   color: rgba(255, 255, 255, 0.5);
   transition: all 0.8s;
 }
 
-.picker a:hover {
+#Projects .picker a {
+  align-self: center;
+  width: 90%;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: rgb(158, 158, 158);
+  background-color: transparent;
+  outline: none;
+  transition: all 0.4s;
+  /* width: max-content; */
+  padding: 0px 10px;
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  margin: 25px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+#Projects .picker a:hover {
   transform: scale(1.025);
   cursor: pointer;
   color: rgb(240, 240, 240);
-  border-bottom: 2px solid rgb(240, 240, 240);
-  border-top: 2px solid rgb(240, 240, 240);
+  background: linear-gradient(
+    90deg,
+    rgba(46, 115, 194, 0.4) 0%,
+    rgba(50, 79, 157, 0.3) 51%,
+    rgba(58, 100, 164, 0.2) 100%
+  );
+  border-radius: 5px;
+}
+
+#Projects .picker .projectActive {
+  transform: scale(1.025);
+  color: rgb(240, 240, 240);
+  background: linear-gradient(
+    90deg,
+    rgba(46, 115, 194, 0.4) 0%,
+    rgba(50, 79, 157, 0.3) 51%,
+    rgba(58, 100, 164, 0.2) 100%
+  );
+  border-radius: 5px;
+}
+
+.picker .projectActive h3 {
+  color: rgb(240, 240, 240);
 }
 
 .picker p,
@@ -85,12 +120,6 @@
 
 .picker p {
   font-size: 0.8em;
-}
-
-.picker a {
-  margin: 25px 0px;
-  display: flex;
-  flex-direction: column;
 }
 
 .picker a:hover h3 {
@@ -113,5 +142,13 @@
     font-size: 0.65em;
     max-width: 300px;
     margin: 0px;
+  }
+
+  #Projects .picker {
+    width: 100%;
+  }
+
+  #Projects .preview {
+    width: 0%;
   }
 }
