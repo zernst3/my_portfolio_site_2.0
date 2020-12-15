@@ -1,5 +1,4 @@
 import React from "react";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import { Link } from "react-router-dom";
 import "./Close.css";
 
