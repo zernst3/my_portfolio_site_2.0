@@ -3,6 +3,7 @@ import CLOUDS from "vanta/dist/vanta.clouds.min";
 import "./App.css";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Routes from "./Routes";
+import { Navbar } from "./components";
 
 const App: React.FC<any> = () => {
   const [vantaEffect, setVantaEffect]: any = useState(0);
@@ -37,6 +38,7 @@ const App: React.FC<any> = () => {
     <React.Fragment>
       <div className="App" ref={myRef}>
         <CssBaseline />
+        <Navbar />
         <Routes />
       </div>
       <div className="clouds" ref={myRef}></div>
