@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./ContactMe.css";
 import { motion } from "framer-motion";
 import axios from "axios";
-import { Close } from "../Close/Close";
 
 export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const [email, setEmail] = useState("");

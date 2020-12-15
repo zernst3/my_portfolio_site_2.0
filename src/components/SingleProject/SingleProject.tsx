@@ -1,10 +1,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import projectList, { Project } from "../../ProjectList";
 import "./SingleProject.css";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { Close } from "../Close/Close";
