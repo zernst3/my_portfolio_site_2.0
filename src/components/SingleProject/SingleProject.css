@@ -91,8 +91,8 @@
   border-left: 8px solid rgb(62, 168, 124);
 }
 
-.projectInfo {
-  margin-bottom: 15px;
+#SingleProjectContainer .projectInfo {
+  margin: 15px 0;
   padding: 10px;
   padding-top: 0;
   width: 100%;
@@ -107,14 +107,14 @@
   line-height: 1.5;
 }
 
-.links {
+#SingleProjectContainer .links {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.links a {
+#SingleProjectContainer .links a {
   flex-wrap: wrap;
   margin: 10px 10px;
   color: rgb(240, 240, 240);
@@ -175,4 +175,17 @@
   .slideshow .carousel-slider img {
     max-height: 350px;
   }
+}
+
+#SingleProjectOuterContainer hr {
+  width: 100%;
+  margin: 15px 0px;
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(
+    to left,
+    rgba(117, 117, 117, 0),
+    rgba(117, 117, 117, 0.75),
+    rgba(117, 117, 117, 0)
+  );
 }

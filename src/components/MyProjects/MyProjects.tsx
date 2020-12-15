@@ -3,7 +3,6 @@ import "./MyProjects.css";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import projectList from "../../ProjectList";
-import { Close } from "../Close/Close";
 import { SingleProject } from "../SingleProject/SingleProject";
 import { Route, Switch, useLocation } from "react-router-dom";
 
@@ -29,8 +28,8 @@ export const MyProjects: React.FC<any> = ({ pageTransition, pageVariants }) => {
       }
     >
       <div id="MyProjectsContainer">
-        <h1>My Projects</h1>
         <div id="MyProjects">
+          <h1>My Projects</h1>
           <div id="Projects">
             <div className="picker">
               {Object.keys(projectList).map((project, idx) => (
@@ -62,7 +61,6 @@ export const MyProjects: React.FC<any> = ({ pageTransition, pageVariants }) => {
             </div>
           </div>
         </div>
-        <Close />
       </div>
     </motion.div>
   );

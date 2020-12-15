@@ -81,7 +81,12 @@ export const SingleProject: React.FC<any> = ({
 
           <div className="projectInfo">
             <p>{longDescription}</p>
-            <p>{moreInformation}</p>
+            {moreInformation && (
+              <React.Fragment>
+                <hr />
+                <p>{moreInformation}</p>
+              </React.Fragment>
+            )}
           </div>
           <div className="links">
             {links.map((link, idx) => (

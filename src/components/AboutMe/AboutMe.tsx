@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./AboutMe.css";
 import { motion } from "framer-motion";
-import { Close } from "../Close/Close";
 import Accordion from "../Accordion/Accordion";
-import woosh1 from "../../../public/sounds/woosh1.mp3";
 
 const Summary: React.FC<any> = () => (
   <div>
@@ -140,26 +138,28 @@ export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
       transition={pageTransition}
     >
       <div id="AboutMeContainer">
-        <h1>About</h1>
-        <div id="AboutMe">
-          <div className="me">
-            <img src="/Me3.png" alt="Me" />
-          </div>
-          <div className="infoContainer">
-            <div className="info">
-              {sections.map((section, idx) => (
-                <Accordion
-                  header={section.header}
-                  idx={idx}
-                  expanded={expanded}
-                  setExpanded={setExpanded}
-                  Component={section.Component}
-                />
-              ))}
+        <div id="AboutMeInnerContainer">
+          <h1>About</h1>
+          <div id="AboutMe">
+            <div className="me">
+              <img src="/Me5.png" alt="Me" />
+            </div>
+            <div className="infoContainer">
+              <div className="info">
+                {sections.map((section, idx) => (
+                  <Accordion
+                    header={section.header}
+                    key={idx}
+                    idx={idx}
+                    expanded={expanded}
+                    setExpanded={setExpanded}
+                    Component={section.Component}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
-        <Close />
       </div>
     </motion.div>
   );

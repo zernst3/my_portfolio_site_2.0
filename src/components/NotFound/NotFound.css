@@ -1,0 +1,17 @@
+#NotFoundContainer {
+  display: flex;
+  height: calc(100vh - 65px);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  backdrop-filter: blur(5px);
+}
+
+#NotFoundContainer h1 {
+  color: rgb(240, 240, 240);
+  font-size: 3em;
+  align-self: center;
+  margin-top: 10px;
+}

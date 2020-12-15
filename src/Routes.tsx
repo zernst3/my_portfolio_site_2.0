@@ -1,6 +1,6 @@
 import React from "react";
-import { Home, AboutMe, MyProjects, ContactMe } from "./components";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Home, AboutMe, MyProjects, ContactMe, NotFound } from "./components";
+import { Route, Switch, useLocation, Redirect } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 const pageVariants = {
@@ -78,6 +78,17 @@ const Routes: React.FC<any> = () => {
             />
           )}
         />
+        <Route
+          path="/404"
+          render={(props: any) => (
+            <NotFound
+              {...props}
+              pageTransition={pageTransition}
+              pageVariants={pageVariants}
+            />
+          )}
+        />
+        <Redirect to="/404" />
       </Switch>
     </AnimatePresence>
   );
