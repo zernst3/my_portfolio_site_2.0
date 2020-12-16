@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./ContactMe.css";
 import { motion } from "framer-motion";
 import axios from "axios";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const [email, setEmail] = useState("");
@@ -120,11 +122,34 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
               </div>
             </React.Fragment>
           ) : loading ? (
-            <h1>Sending Email...</h1>
+            <div className="page">
+              <Loader
+                type="ThreeDots"
+                color="#F0F0F0"
+                height={100}
+                width={100}
+                timeout={25000}
+              />
+              <h2>Sending Email</h2>
+              <Loader
+                type="ThreeDots"
+                color="#F0F0F0"
+                height={100}
+                width={100}
+                timeout={25000}
+              />
+            </div>
           ) : thankYou ? (
-            <h1>Thank you for your message!</h1>
+            <div className="page">
+              <h2>Thank you for your message!</h2>
+            </div>
           ) : (
-            <h1>There has been an error</h1>
+            <div className="page">
+              <h2>
+                There has been an error, please contact me directly at:{" "}
+                <a href="mailto:zernst3@live.com">zernst3@live.com</a>
+              </h2>
+            </div>
           )}
         </div>
       </div>

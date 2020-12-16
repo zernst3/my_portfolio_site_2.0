@@ -23,6 +23,7 @@
   height: 90%;
   overflow: auto;
   padding: 10px;
+  overflow-x: hidden;
 }
 
 #ContactMeContainer h1 {
@@ -30,6 +31,22 @@
   font-size: 3em;
   color: rgb(240, 240, 240);
   align-self: center;
+}
+
+#ContactMeContainer h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 2.5em;
+  color: rgb(240, 240, 240);
+  align-self: center;
+  margin: 0 15px;
+}
+
+#ContactMe .page {
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
 }
 
 #ContactMe .form {
@@ -122,7 +139,8 @@ textarea:-webkit-autofill {
   margin: 5px;
 }
 
-#ContactMe h3 a {
+#ContactMe h3 a,
+#ContactMe h2 a {
   color: rgb(240, 240, 240);
   font-family: "Merriweather", serif;
   font-weight: 100;

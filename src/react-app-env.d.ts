@@ -9,3 +9,5 @@ declare module "vanta/dist/vanta.fog.min";
 declare module "vanta/dist/vanta.clouds.min";
 
 declare module "*.mp3";
+
+declare module "react-loader-spinner";
