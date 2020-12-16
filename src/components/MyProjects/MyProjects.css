@@ -42,9 +42,11 @@
 
 #Projects .picker {
   width: 40%;
+  height: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 #Projects .preview {
