@@ -42,6 +42,11 @@ const projectList: ProjectList = {
         type: "Youtube Video",
         link: "https://youtu.be/IgKg1YVfEBg",
       },
+      {
+        type: "My TS Blog Post",
+        link:
+          "https://zacharyernst.medium.com/the-case-for-adding-typescript-to-your-javascript-applications-f4ee6599e003",
+      },
     ],
   },
   shootar: {
