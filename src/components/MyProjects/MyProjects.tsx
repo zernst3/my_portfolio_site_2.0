@@ -32,17 +32,19 @@ export const MyProjects: React.FC<any> = ({ pageTransition, pageVariants }) => {
           <h1>My Projects</h1>
           <div id="Projects">
             <div className="picker">
-              {Object.keys(projectList).map((project, idx) => (
-                <NavLink
-                  to={`/myprojects/${project}`}
-                  key={idx}
-                  className={"left"}
-                  activeClassName={"projectActive"}
-                >
-                  <h3>{projectList[project].name}</h3>
-                  <p>{projectList[project].shortDescription}</p>
-                </NavLink>
-              ))}
+              <div>
+                {Object.keys(projectList).map((project, idx) => (
+                  <NavLink
+                    to={`/myprojects/${project}`}
+                    key={idx}
+                    className={"left"}
+                    activeClassName={"projectActive"}
+                  >
+                    <h3>{projectList[project].name}</h3>
+                    <p>{projectList[project].shortDescription}</p>
+                  </NavLink>
+                ))}
+              </div>
             </div>
             <div className="preview">
               <Switch location={location} key={location.pathname}>
