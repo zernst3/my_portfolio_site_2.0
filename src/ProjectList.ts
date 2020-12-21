@@ -106,6 +106,29 @@ const projectList: ProjectList = {
       },
     ],
   },
+  ecommerce: {
+    name: "E-Commerce Website",
+    shortDescription: "A full-stack e-commerce project",
+    longDescription: `This full-stack e-commerce application was created with a group of people using agile project management. It includes a product list, single products page, cart, checkout and administration features. Technologies used: PostgresSQL, Node, Express, React and Redux.`,
+    moreInformation: `I would like to thank my team members: Agne Urbaityte, Peter Boustani and Dusan Rula`,
+    images: [
+      "/ecommerce_images/home.png",
+      "/ecommerce_images/signup.png",
+      "/ecommerce_images/singlealbum.png",
+      "/ecommerce_images/cart.png",
+      "/ecommerce_images/checkout.png",
+      "/ecommerce_images/thankyou.png",
+      "/ecommerce_images/adminhome.png",
+      "/ecommerce_images/addalbum.png",
+      "/ecommerce_images/editalbum.png",
+    ],
+    links: [
+      {
+        type: "Github",
+        link: "https://github.com/zernst3/how-the-turntables",
+      },
+    ],
+  },
 };
 
 export default projectList;

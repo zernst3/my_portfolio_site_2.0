@@ -6,12 +6,14 @@ import Accordion from "../Accordion/Accordion";
 const Summary: React.FC<any> = () => (
   <div>
     <p>
-      I have been working on developing my skills as a web designer and
-      developer since January, 2020. I am currently studying these skills and
-      diversifying my education at FullStack Academy. There are many other
-      resources I have used including: Harvard's CS50X, Udemy, Youtube and Stack
-      Overflow. I am extremely passionate about this field, and determined to
-      grow and learn more.
+      I am a determined, results-oriented and focused software engineer with an
+      attention to detail and a passion for improving my skills. Beginning in
+      January of 2020, my journey into software development began by self-study
+      of the CS50 Introduction to Computer Science course offered by Harvard
+      University. I continued with certification from FullStack Academy. Through
+      this, I have developed a greater understanding of programming and
+      development. I am always looking to learn new technologies to become the
+      best software engineer I can be.
     </p>
   </div>
 );
@@ -23,6 +25,14 @@ const Skills: React.FC<any> = () => (
         <div className="technology">
           <h3>Front-End:</h3>
           <div>
+            <img
+              src="https://icons.iconarchive.com/icons/cornmanthe3rd/plex/256/Other-html-5-icon.png"
+              alt="HTML 5"
+            />
+            <img
+              src="https://icons.iconarchive.com/icons/martz90/hex/512/css-3-icon.png"
+              alt="CSS 3"
+            />
             <img
               style={{ margin: "0px" }}
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
@@ -66,11 +76,41 @@ const Skills: React.FC<any> = () => (
         </div>
 
         <div className="technology">
+          <h3>Languages:</h3>
+          <div>
+            <img
+              src="https://www.devexhub.com/wp-content/uploads/2019/12/javascript-icon-png-23.png"
+              alt="JavaScript"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png"
+              alt="TypeScript"
+            />
+          </div>
+        </div>
+
+        <div className="technology">
+          <h3>Operating Systems:</h3>
+          <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Windows_logo_-_2012.png/700px-Windows_logo_-_2012.png"
+              alt="Windows"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/1200px-UbuntuCoF.svg.png"
+              alt="Ubuntu"
+            />
+          </div>
+        </div>
+
+        <div className="technology">
           <h3>Other:</h3>
           <div>
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png"
-              alt="Typescript"
+              style={{ padding: "0" }}
+              className="technologyBackground"
+              src="https://www.seerene.com/hubfs/agile%20SOFTWARE%20DEVELOPMENT.svg"
+              alt="Agile Project Management"
             />
             <img
               src="https://media.prod.mdn.mozit.cloud/attachments/2019/06/14/16742/4a5f228a878fe1e8de5213bdb599eeef/pwa.png"
