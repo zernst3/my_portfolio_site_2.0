@@ -6,3 +6,24 @@
   top: 0;
   left: 0;
 }
+
+#Loading {
+  background-color: rgb(0, 59, 15);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+#Loading h1 {
+  color: rgb(240, 240, 240);
+  font-family: "Merriweather", serif;
+  font-weight: 100;
+  line-height: 1.5;
+}

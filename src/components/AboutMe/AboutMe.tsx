@@ -7,13 +7,12 @@ const Summary: React.FC<any> = () => (
   <div>
     <p>
       I am a determined, results-oriented and focused software engineer with an
-      attention to detail and a passion for improving my skills. Beginning in
-      January of 2020, my journey into software development began by self-study
-      of the CS50 Introduction to Computer Science course offered by Harvard
-      University. I continued with certification from FullStack Academy. Through
-      this, I have developed a greater understanding of programming and
-      development. I am always looking to learn new technologies to become the
-      best software engineer I can be.
+      attention to detail and a passion for improving my skills. My software
+      development education began with self-study of the CS50 Introduction to
+      Computer Science course offered by Harvard University. I continued with
+      certification from FullStack Academy. Through this, I have developed a
+      greater understanding of programming and development. I am continually
+      seeking opportunities to become proficient with new technologies.
     </p>
   </div>
 );
@@ -129,9 +128,9 @@ const MoreDetails: React.FC<any> = () => (
       Starting in January 2020, I began my journey in web development through
       youtube as well as the Udemy course on this subject created by Colt
       Steele. By this point I began to understand the fundamentals of HTML and
-      CSS development. After this, I had learned about the acclaimed CS50 course
-      offered by Harvard for free and began to study the fundamentals of
-      programming in C, as well as some Python (Flask) and MySQL.
+      CSS development. Afterwards, I had learned about the acclaimed CS50 course
+      offered by Harvard online and began to study the fundamentals of
+      programming in C, as well as some Python, Flask and MySQL.
     </p>
 
     <br />
@@ -139,7 +138,7 @@ const MoreDetails: React.FC<any> = () => (
     <p>
       As I came to the final stage of CS50, I decided to complete my final
       project by continuing my studies through the Udemy course mentioned
-      before. By utilizing what I learned in this course, I completed my final
+      before. By utilizing what I learned in that course, I completed my final
       project for CS50 (as well as my first major full-stack project); details
       on this can be found in my projects page.
     </p>
@@ -157,13 +156,18 @@ const MoreDetails: React.FC<any> = () => (
       delved much deeper into web development technologies including: Node,
       Express, PostgresSQL, React, Redux and much more.
     </p>
+
+    <p>
+      Now that I have graduated, I am looking for opportunities to continue to
+      grow and learn more in this field.
+    </p>
   </div>
 );
 
 const sections = [
   { header: "Summary", Component: Summary },
   { header: "Skills", Component: Skills },
-  { header: "My Journey", Component: MoreDetails },
+  { header: "More Details", Component: MoreDetails },
 ];
 
 export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
