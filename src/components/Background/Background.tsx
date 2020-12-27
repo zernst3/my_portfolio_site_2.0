@@ -21,7 +21,10 @@ const Skybox = (props: any) => {
   ]);
 
   scene.background = texture;
-  setIsLoaded(true);
+  setTimeout(() => {
+    setIsLoaded(true);
+  }, 750);
+
   return null;
 };
 

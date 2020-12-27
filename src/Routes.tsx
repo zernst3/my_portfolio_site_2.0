@@ -5,9 +5,9 @@ import { AnimatePresence } from "framer-motion";
 
 const pageVariants = {
   initial: {
-    opacity: 0,
-    // x: "50vw",
-    scale: 0.9,
+    // opacity: 0,
+    x: "100vw",
+    scale: 0.5,
   },
   in: {
     opacity: 1,
@@ -15,16 +15,16 @@ const pageVariants = {
     scale: 1,
   },
   out: {
-    opacity: 0,
-    // x: "-50vw",
+    // opacity: 0,
+    x: "-100vw",
     // y: "100vh",
-    scale: 0.9,
+    scale: 0.5,
   },
 };
 
 const pageTransition = {
   // ease: "anticipate",
-  duration: 0.2,
+  duration: 0.3,
 };
 
 const Routes: React.FC<any> = () => {

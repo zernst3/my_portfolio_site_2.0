@@ -125,7 +125,7 @@ const projectList: ProjectList = {
     links: [
       {
         type: "Github",
-        link: "https://github.com/zernst3/how-the-turntables",
+        link: "https://github.com/rise-of-skyshopper/how-the-turntables",
       },
     ],
   },
