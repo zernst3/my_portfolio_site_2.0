@@ -12,19 +12,16 @@ const Skybox = (props: any) => {
   const { scene } = useThree();
   const loader = new CubeTextureLoader();
   const texture = loader.load([
-    "/background/posx.jpg",
-    "/background/negx.jpg",
-    "/background/posy.jpg",
-    "/background/negy.jpg",
-    "/background/posz.jpg",
-    "/background/negz.jpg",
+    "/background/posx.webp",
+    "/background/negx.webp",
+    "/background/posy.webp",
+    "/background/negy.webp",
+    "/background/posz.webp",
+    "/background/negz.webp",
   ]);
 
   scene.background = texture;
-  setTimeout(() => {
-    setIsLoaded(true);
-  }, 750);
-
+  setIsLoaded(true);
   return null;
 };
 
