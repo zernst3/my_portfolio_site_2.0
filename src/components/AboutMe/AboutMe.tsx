@@ -157,6 +157,8 @@ const MoreDetails: React.FC<any> = () => (
       Express, PostgresSQL, React, Redux and much more.
     </p>
 
+    <br />
+
     <p>
       Now that I have graduated, I am looking for opportunities to continue to
       grow and learn more in this field.
