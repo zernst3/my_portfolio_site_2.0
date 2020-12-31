@@ -68,7 +68,7 @@
 #AboutMe .me {
   width: 35%;
   display: flex;
-  margin: auto 20px;
+  margin: 10px 20px;
   align-self: center;
 }
 

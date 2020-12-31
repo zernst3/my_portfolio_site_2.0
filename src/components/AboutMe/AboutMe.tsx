@@ -188,7 +188,7 @@ export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
           <h1>About</h1>
           <div id="AboutMe">
             <div className="me">
-              <img src="/Me5.png" alt="Me" />
+              <img src="/Me8 Transparent Background.png" alt="Me" />
             </div>
             <div className="infoContainer">
               <div className="info">

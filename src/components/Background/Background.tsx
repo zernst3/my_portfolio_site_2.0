@@ -21,7 +21,10 @@ const Skybox = (props: any) => {
   ]);
 
   scene.background = texture;
-  setIsLoaded(true);
+  setTimeout(() => {
+    setIsLoaded(true);
+  }, 2000);
+
   return null;
 };
 
@@ -40,7 +43,7 @@ export const Background = () => {
       {!isLoaded && (
         <div id="Loading">
           <Loader
-            type="ThreeDots"
+            type="Bars"
             color="#F0F0F0"
             height={100}
             width={100}
@@ -48,7 +51,7 @@ export const Background = () => {
           />
           <h1>Loading</h1>
           <Loader
-            type="ThreeDots"
+            type="Bars"
             color="#F0F0F0"
             height={100}
             width={100}
