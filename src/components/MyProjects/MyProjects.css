@@ -88,12 +88,6 @@
   transform: scale(1.025);
   cursor: pointer;
   color: rgb(240, 240, 240);
-  background: linear-gradient(
-    90deg,
-    rgba(46, 115, 194, 0.4) 0%,
-    rgba(50, 79, 157, 0.3) 51%,
-    rgba(58, 100, 164, 0.2) 100%
-  );
   border-radius: 5px;
 }
 
