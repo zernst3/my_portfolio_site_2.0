@@ -53,7 +53,7 @@ const Skills: React.FC<any> = () => (
             />
             <img
               className="technologyBackground"
-              src="https://www.sohamkamani.com/static/65137ed3c844d05124dcfdab28263c21/6b427/express-routing-logo.png"
+              src="https://buttercms.com/static/images/tech_banners/ExpressJS.png"
               alt="express.js"
             />
           </div>
