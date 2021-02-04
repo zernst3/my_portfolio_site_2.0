@@ -30,6 +30,12 @@ export const MyProjects: React.FC<any> = ({ pageTransition, pageVariants }) => {
       <div id="MyProjectsContainer">
         <div id="MyProjects">
           <h1>My Projects</h1>
+          <h3>
+            *Live projects are hosted on Heroku and may take time to start on
+            initial load
+            <br />
+            Projects will soon be migrated to a new host to mitigate this
+          </h3>
           <div id="Projects">
             <div className="picker">
               <div>

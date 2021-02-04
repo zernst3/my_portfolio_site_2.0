@@ -32,6 +32,12 @@
   align-self: center;
 }
 
+#MyProjects > h3 {
+  color: rgb(185, 185, 185);
+  margin-bottom: 10px;
+  align-self: center;
+}
+
 #Projects {
   height: 100%;
   width: 100%;
