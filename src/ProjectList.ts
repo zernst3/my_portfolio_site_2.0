@@ -12,6 +12,10 @@ interface ProjectList {
 }
 
 const projectList: ProjectList = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> release/3.0
   translationchatapp: {
     name: "Translation Chat App",
     shortDescription: "A basic chat application that translates messages",
@@ -95,10 +99,6 @@ const projectList: ProjectList = {
       {
         type: "Github",
         link: "https://github.com/zernst3/my-simple-crm",
-      },
-      {
-        type: "Deployed Demo",
-        link: "https://zernst-crm.herokuapp.com/login",
       },
       {
         type: "Youtube Video",

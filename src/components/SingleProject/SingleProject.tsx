@@ -5,71 +5,47 @@ import projectList, { Project } from "../../ProjectList";
 import "./SingleProject.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { Close } from "../Close/Close";
-
-// export const itemVariants = {
-//   initial: {
-//     opacity: 0,
-//     y: "-100vh",
-//     scale: 0.5,
-//   },
-//   in: {
-//     opacity: 1,
-//     y: 0,
-//     scale: 1,
-//   },
-//   out: {
-//     opacity: 0,
-//     y: "-100vh",
-//     scale: 1.5,
-//   },
-// };
-
-// export const itemTransition = {
-//   delay: 0.0,
-//   duration: 1,
-// };
-
-// export const itemTransition2 = {
-//   delay: 0.1,
-//   duration: 1,
-// };
-
-// export const itemTransition3 = {
-//   delay: 0.2,
-//   duration: 1,
-// };
+import woosh from "../../sounds/woosh2.mp3";
 
 export const SingleProject: React.FC<any> = ({
-  pageTransition,
-  pageVariants,
-  match,
+  project,
+  setCurrentProject,
 }) => {
-  const { project } = match.params;
   const currentProject: Project = projectList[project];
-  const {
-    name,
-    longDescription,
-    moreInformation,
-    images,
-    links,
-  } = currentProject;
+  let name, longDescription, moreInformation, images, links;
+
+  if (currentProject) {
+    name = currentProject.name;
+    longDescription = currentProject.longDescription;
+    moreInformation = currentProject.moreInformation;
+    images = currentProject.images;
+    links = currentProject.links;
+  }
+
+  const wooshAudio = new Audio(woosh);
+
+  wooshAudio.volume = 0.15;
+
+  const onClick = () => {
+    wooshAudio.play();
+    setCurrentProject(null);
+  };
+
+  const playWoosh = () => {
+    wooshAudio.play();
+  }
 
   return (
-    <motion.div
-      initial="initial"
-      exit="none"
-      animate="in"
-      variants={pageVariants}
-      transition={pageTransition}
-      id="SingleProjectOuterContainer"
-    >
+    <motion.div id="SingleProjectOuterContainer">
       <div id="SingleProjectContainer">
         <div id="SingleProject">
           <h1 className="mobile">{name}</h1>
-          <div className="slideshow">
+          <div className="slideshow"
+          onClick={playWoosh}
+          onTouchMove={playWoosh}
+          >
             <Carousel autoPlay interval={5000} infiniteLoop>
-              {images.map((image, idx) => (
+              {images?.map((image, idx) => (
                 <div key={idx}>
                   <img src={image} alt="Project Picture" />
                 </div>
@@ -87,7 +63,7 @@ export const SingleProject: React.FC<any> = ({
             )}
           </div>
           <div className="links">
-            {links.map((link, idx) => (
+            {links?.map((link, idx) => (
               <a key={idx} href={link.link} target="_blank" rel="noreferrer">
                 {link.type}
               </a>
@@ -95,11 +71,11 @@ export const SingleProject: React.FC<any> = ({
           </div>
         </div>
         <div className="mobile">
-          <Close link={"/myprojects"} />
+          <button onClick={onClick}>Back</button>
         </div>
       </div>
     </motion.div>
   );
 };
 
-export default SingleProject;
+export default React.memo(SingleProject);

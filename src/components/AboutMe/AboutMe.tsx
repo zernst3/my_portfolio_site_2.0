@@ -2,17 +2,27 @@ import React, { useState } from "react";
 import "./AboutMe.css";
 import { motion } from "framer-motion";
 import Accordion from "../Accordion/Accordion";
+import { Close } from "../Close/Close";
+import select from "../../sounds/select.mp3";
 
 const Summary: React.FC<any> = () => (
   <div>
     <p>
-      I am a determined, results-oriented and focused software engineer with an
-      attention to detail and a passion for improving my skills. My software
-      development education began with self-study of the CS50 Introduction to
-      Computer Science course offered by Harvard University. I continued with
-      certification from FullStack Academy. Through this, I have developed a
-      greater understanding of programming and development. I am continually
-      seeking opportunities to become proficient with new technologies.
+      I am a determined and focused software and cloud developer with an
+      attention to detail and a passion for improving my skills. My education
+      began with self-study of the CS50 Introduction to Computer Science course
+      offered by Harvard University. I continued with additional self-study and
+      certification from FullStack Academy in Web Development.
+    </p>
+
+    <br />
+    
+    <p>
+      My career started with Trusight Solutions, starting as an Application
+      Support Engineer and later promoted to Associate Cloud Developer. Through
+      these experiences, I have developed a greater understanding of programming
+      and development. I am continually seeking opportunities to become
+      proficient with new technologies.
     </p>
   </div>
 );
@@ -56,6 +66,11 @@ const Skills: React.FC<any> = () => (
               src="https://buttercms.com/static/images/tech_banners/ExpressJS.png"
               alt="express.js"
             />
+            <img
+              className="technologyBackground"
+              src="https://cdn.iconscout.com/icon/free/png-256/microsoft-dot-net-1-1175179.png"
+              alt="Dotnet"
+            />
           </div>
         </div>
 
@@ -63,8 +78,9 @@ const Skills: React.FC<any> = () => (
           <h3>Database:</h3>
           <div>
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png"
-              alt="PostgreSQL"
+              className="technologyBackground"
+              src="https://cdn2.iconfinder.com/data/icons/programming-50/64/206_programming-sql-data-database-512.png"
+              alt="SQL"
             />
             <img
               className="technologyBackground"
@@ -78,12 +94,20 @@ const Skills: React.FC<any> = () => (
           <h3>Languages:</h3>
           <div>
             <img
-              src="https://www.devexhub.com/wp-content/uploads/2019/12/javascript-icon-png-23.png"
+              src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png"
               alt="JavaScript"
             />
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png"
               alt="TypeScript"
+            />
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png"
+              alt="Python"
+            />
+            <img
+              src="https://iconape.com/wp-content/png_logo_vector/c.png"
+              alt="C#"
             />
           </div>
         </div>
@@ -99,12 +123,20 @@ const Skills: React.FC<any> = () => (
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/1200px-UbuntuCoF.svg.png"
               alt="Ubuntu"
             />
+            <img
+              src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/apple-ios-system-platform-os-mac-linux-512.png"
+              alt="Macintosh"
+            />
           </div>
         </div>
 
         <div className="technology">
           <h3>Other:</h3>
           <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png"
+              alt="Microsoft Azure"
+            />
             <img
               style={{ padding: "0" }}
               className="technologyBackground"
@@ -160,8 +192,25 @@ const MoreDetails: React.FC<any> = () => (
     <br />
 
     <p>
-      Now that I have graduated, I am looking for opportunities to continue to
-      grow and learn more in this field.
+      After completing certification from FullStack Academy, I began working for
+      Trusight Solutions as an Application Support Engineer. Initially, the
+      responsibilities for this position were to support the web application
+      used by internal and external users. The range of support required was
+      from password-resets to api configuration in Azure. Over time, I developed
+      my skills further and began scripting support tasks and developing an
+      internal support application to give internal users the ability to
+      self-service some of the most common support requests. In addition, my
+      responsibilities began to include development work on the front-end and
+      back-end of our internal application, as well as some supporting
+      functions. I was then promoted to Associate Cloud Developer to better
+      reflect the responsibilities that my position evolved to envelope.
+    </p>
+
+    <br />
+
+    <p>
+      In June of 2022, I took the AZ900 Microsoft Azure Fundamentals
+      Certification and passed the exam.
     </p>
   </div>
 );
@@ -174,6 +223,13 @@ const sections = [
 
 export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const [expanded, setExpanded] = useState<false | number>(0);
+  const selectAudio = new Audio(select);
+
+  selectAudio.volume = 0.45;
+
+  const playSelect = () => {
+    selectAudio.play();
+  };
 
   return (
     <motion.div
@@ -193,14 +249,16 @@ export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
             <div className="infoContainer">
               <div className="info">
                 {sections.map((section, idx) => (
-                  <Accordion
-                    header={section.header}
-                    key={idx}
-                    idx={idx}
-                    expanded={expanded}
-                    setExpanded={setExpanded}
-                    Component={section.Component}
-                  />
+                  <div onClick={playSelect}>
+                    <Accordion
+                      header={section.header}
+                      key={idx}
+                      idx={idx}
+                      expanded={expanded}
+                      setExpanded={setExpanded}
+                      Component={section.Component}
+                    />
+                  </div>
                 ))}
               </div>
             </div>

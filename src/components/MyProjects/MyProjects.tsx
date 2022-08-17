@@ -1,50 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MyProjects.css";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import projectList from "../../ProjectList";
-import { SingleProject } from "../SingleProject/SingleProject";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Close } from "../Close/Close";
+import select from "../../sounds/select.mp3";
+import woosh3 from "../../sounds/woosh3.mp3";
+import SingleProject from "../SingleProject/SingleProject";
 
 export const MyProjects: React.FC<any> = ({ pageTransition, pageVariants }) => {
+  const [currentProject, setCurrentProject]: any = useState(null);
   const location = useLocation();
+  const selectAudio = new Audio(select);
+
+  let playWoosh = true;
+
+  const playWoosh3 = () => {
+    const woosh3Audio = new Audio(woosh3);
+    woosh3Audio.volume = 0.25;
+    playWoosh && woosh3Audio.play();
+  };
+
+  selectAudio.volume = 0.45;
+
+  const playSelect = () => {
+    selectAudio.play();
+  };
 
   return (
     <motion.div
-      initial={
-        !window.location.pathname.includes("/myprojects/") ? "initial" : "none"
-      }
-      exit={!window.location.pathname.includes("/myprojects/") ? "out" : "none"}
-      animate={
-        !window.location.pathname.includes("/myprojects/") ? "in" : "none"
-      }
-      variants={
-        !window.location.pathname.includes("/myprojects/") ? pageVariants : {}
-      }
-      transition={
-        !window.location.pathname.includes("/myprojects/")
-          ? pageTransition
-          : { duration: 0 }
-      }
+      initial="initial"
+      exit="out"
+      animate="in"
+      variants={pageVariants}
+      transition={pageTransition}
     >
       <div id="MyProjectsContainer">
         <div id="MyProjects">
-          <h1>My Projects</h1>
-          <h3>
-            *Live projects are hosted on Heroku and may take time to start on
-            initial load
-            <br />
-            Projects will soon be migrated to a new host to mitigate this
-          </h3>
+          <h1>Personal Projects</h1>
           <div id="Projects">
             <div className="picker">
               <div>
                 {Object.keys(projectList).map((project, idx) => (
                   <NavLink
-                    to={`/myprojects/${project}`}
+                    onClick={() => {
+                      playWoosh = false;
+                      playSelect();
+                      setCurrentProject(project);
+                    }}
+                    onMouseEnter={() => setTimeout(playWoosh3, 5)}
+                    to={``}
                     key={idx}
-                    className={"left"}
-                    activeClassName={"projectActive"}
+                    className={(navData) =>
+                      project === currentProject ? "left projectActive" : "left"
+                    }
                   >
                     <h3>{projectList[project].name}</h3>
                     <p>{projectList[project].shortDescription}</p>
@@ -53,19 +62,16 @@ export const MyProjects: React.FC<any> = ({ pageTransition, pageVariants }) => {
               </div>
             </div>
             <div className="preview">
-              <Switch location={location} key={location.pathname}>
-                <Route
-                  exact
-                  path="/myprojects/:project"
-                  render={(props: any) => (
-                    <SingleProject
-                      {...props}
-                      pageTransition={pageTransition}
-                      pageVariants={pageVariants}
-                    />
-                  )}
+              {!currentProject ? (
+                <h2>Select a project to preview details</h2>
+              ) : (
+                <SingleProject
+                  project={currentProject}
+                  pageTransition={pageTransition}
+                  pageVariants={pageVariants}
+                  setCurrentProject={setCurrentProject}
                 />
-              </Switch>
+              )}
             </div>
           </div>
         </div>
@@ -74,4 +80,4 @@ export const MyProjects: React.FC<any> = ({ pageTransition, pageVariants }) => {
   );
 };
 
-export default MyProjects;
+export default React.memo(MyProjects);

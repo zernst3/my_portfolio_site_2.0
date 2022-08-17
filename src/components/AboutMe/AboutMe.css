@@ -1,5 +1,9 @@
 #AboutMeContainer {
+<<<<<<< HEAD
   height: calc(100vh - 65px);
+=======
+  height: 100%;
+>>>>>>> release/3.0
   width: 100%;
   display: flex;
   /* justify-content: center; */

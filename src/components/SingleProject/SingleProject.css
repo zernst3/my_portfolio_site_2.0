@@ -1,6 +1,7 @@
 #SingleProjectOuterContainer {
   height: 100%;
-  width: 100%;
+  width: 95%;
+  padding: 10px;
 }
 
 #SingleProjectContainer {
@@ -12,6 +13,7 @@
   align-items: center;
   flex-direction: column;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 #SingleProjectContainer h1 {
@@ -44,7 +46,7 @@
 }
 
 .slideshow .carousel-slider {
-  height: 100%;
+  max-height: 500px;
 }
 
 .slideshow .carousel-slider img {
@@ -52,7 +54,7 @@
   justify-self: center;
   width: auto !important;
   max-width: 100%;
-  max-height: 700px;
+  max-height: 500px;
 }
 
 .slide {
@@ -108,7 +110,7 @@
 }
 
 #SingleProjectContainer .links {
-  padding: 10px;
+  margin: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -151,17 +153,20 @@
     position: absolute;
     height: 100%;
     width: 100vw;
-    background-color: rgba(41, 70, 70, 1);
+    background-color: rgb(7, 55, 87);
     z-index: 1000000000;
     padding: 10px 10px;
   }
 
   #SingleProjectContainer {
     padding: 10px 10px;
+    width: 90%;
   }
 
   #SingleProjectContainer .mobile {
     display: block;
+    min-height: 75px;
+    
   }
 }
 
@@ -188,4 +193,25 @@
     rgba(117, 117, 117, 0.75),
     rgba(117, 117, 117, 0)
   );
+}
+
+#SingleProjectContainer .mobile button {
+  align-self: flex-start;
+  margin: 5px 5%;
+  border: 1px solid rgba(240, 240, 240, 0.2);
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: rgb(240, 240, 240);
+  position: relative;
+  z-index: 100000;
+  background-color: rgba(201, 105, 105, 0.336);
+  display: inline-block;
+  padding: 10px;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+#SingleProjectContainer .mobile button:hover {
+  background-color: rgba(201, 105, 105, 0.801);
+  cursor: pointer;
 }

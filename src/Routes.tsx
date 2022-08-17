@@ -1,7 +1,8 @@
 import React from "react";
-import { Home, AboutMe, MyProjects, ContactMe, NotFound } from "./components";
-import { Route, Switch, useLocation, Redirect } from "react-router-dom";
+import { Home, AboutMe, MyProjects, ContactMe, EducationAndWork, NotFound } from "./components";
+import { Navigate, Route, Routes, useLocation } from "react-router";
 import { AnimatePresence } from "framer-motion";
+import { SingleProject } from "./components/index";
 
 const pageVariants = {
   initial: {
@@ -15,83 +16,94 @@ const pageVariants = {
     scale: 1,
   },
   out: {
-    // opacity: 0,
-    x: "-100vw",
-    // y: "100vh",
-    scale: 0.5,
+    opacity: 0,
+    scale: 0.9,
   },
 };
 
 const pageTransition = {
-  // ease: "anticipate",
-  duration: 0.3,
+  duration: 0.2,
 };
 
-const Routes: React.FC<any> = () => {
+const AllRoutes: React.FC<any> = () => {
+
   const location = useLocation();
 
   return (
     <AnimatePresence>
-      <Switch location={location} key={location.pathname}>
+      <Routes location={location} key={location.pathname}>
         <Route
-          exact
           path="/"
-          render={(props: any) => (
-            <Home
-              {...props}
-              pageTransition={pageTransition}
-              pageVariants={pageVariants}
-            />
-          )}
+          element={
+            <Home pageTransition={pageTransition} pageVariants={pageVariants} />
+          }
         />
+
         <Route
-          exact
           path="/aboutme"
-          render={(props: any) => (
+          element={
             <AboutMe
-              {...props}
               pageTransition={pageTransition}
               pageVariants={pageVariants}
             />
-          )}
+          }
         />
 
         <Route
-          path="/myprojects"
-          render={(props: any) => (
+          path="/educationandwork"
+          element={
+            <EducationAndWork
+              pageTransition={pageTransition}
+              pageVariants={pageVariants}
+            />
+          }
+        />
+
+        <Route
+          path="/personalprojects"
+          element={
             <MyProjects
-              {...props}
               pageTransition={pageTransition}
               pageVariants={pageVariants}
             />
-          )}
-        />
+          }
+        >
+          {/* <Route
+            path=":project"
+            element={
+              <SingleProject
+                pageTransition={pageTransition}
+                pageVariants={pageVariants}
+              />
+            }
+          /> */}
+        </Route>
 
         <Route
-          exact
           path="/contactme"
-          render={(props: any) => (
+          element={
             <ContactMe
-              {...props}
               pageTransition={pageTransition}
               pageVariants={pageVariants}
             />
-          )}
+          }
         />
         <Route
           path="/404"
-          render={(props: any) => (
+          element={
             <NotFound
-              {...props}
               pageTransition={pageTransition}
               pageVariants={pageVariants}
             />
-          )}
+          }
         />
-        <Redirect to="/404" />
-      </Switch>
+        <Route
+        path="*"
+        element={<Navigate to="/404" replace />}
+    />
+      </Routes>
     </AnimatePresence>
   );
 };
 
-export default Routes;
+export default AllRoutes;
