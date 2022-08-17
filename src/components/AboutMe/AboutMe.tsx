@@ -264,7 +264,6 @@ export const AboutMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
             </div>
           </div>
         </div>
-        <Close />
       </div>
     </motion.div>
   );

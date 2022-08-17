@@ -1,0 +1,36 @@
+#Background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+#Loading {
+  background: rgb(0, 143, 103);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 143, 103, 1) 0%,
+    rgba(71, 130, 74, 1) 51%,
+    rgba(78, 135, 68, 1) 100%
+  );
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+#Loading h1 {
+  color: rgb(240, 240, 240);
+  font-family: "Merriweather", serif;
+  font-weight: 100;
+  line-height: 1.5;
+  margin: 0 10px;
+}

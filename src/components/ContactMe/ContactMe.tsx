@@ -2,11 +2,16 @@ import React, { useState } from "react";
 import "./ContactMe.css";
 import { motion } from "framer-motion";
 import axios from "axios";
+<<<<<<< HEAD
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+=======
 import {ThreeDots} from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { Close } from "../Close/Close";
 import select from "../../sounds/select.mp3";
 
+>>>>>>> release/3.0
 
 export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const [email, setEmail] = useState("");
@@ -135,6 +140,22 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
             </React.Fragment>
           ) : loading ? (
             <div className="page">
+<<<<<<< HEAD
+              <Loader
+                type="ThreeDots"
+                color="#F0F0F0"
+                height={100}
+                width={100}
+                timeout={25000}
+              />
+              <h2>Sending Email</h2>
+              <Loader
+                type="ThreeDots"
+                color="#F0F0F0"
+                height={100}
+                width={100}
+                timeout={25000}
+=======
               <ThreeDots
                 color="#F0F0F0"
                 height={100}
@@ -145,6 +166,7 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                 color="#F0F0F0"
                 height={100}
                 width={100}
+>>>>>>> release/3.0
               />
             </div>
           ) : thankYou ? (
@@ -160,7 +182,6 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
             </div>
           )}
         </div>
-        <Close />
       </div>
     </motion.div>
   );

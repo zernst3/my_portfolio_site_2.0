@@ -5,9 +5,9 @@ import { AnimatePresence } from "framer-motion";
 
 const pageVariants = {
   initial: {
-    opacity: 0,
-    // x: "50vw",
-    scale: 0.9,
+    // opacity: 0,
+    x: "100vw",
+    scale: 0.5,
   },
   in: {
     opacity: 1,

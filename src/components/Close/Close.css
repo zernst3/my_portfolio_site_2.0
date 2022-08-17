@@ -17,9 +17,14 @@
   transition: all 0.2s;
 }
 
+<<<<<<< HEAD
+#Close a:hover {
+  background-color: rgba(182, 36, 36, 0.801);
+=======
 #Close button:hover {
   background-color: rgba(201, 105, 105, 0.801);
   cursor: pointer;
+>>>>>>> release/3.0
 }
 
 #Close button p {

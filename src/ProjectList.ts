@@ -12,7 +12,10 @@ interface ProjectList {
 }
 
 const projectList: ProjectList = {
+<<<<<<< HEAD
+=======
 
+>>>>>>> release/3.0
   translationchatapp: {
     name: "Translation Chat App",
     shortDescription: "A basic chat application that translates messages",
