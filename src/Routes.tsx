@@ -2,7 +2,6 @@ import React from "react";
 import { Home, AboutMe, MyProjects, ContactMe, EducationAndWork, NotFound } from "./components";
 import { Navigate, Route, Routes, useLocation } from "react-router";
 import { AnimatePresence } from "framer-motion";
-import { SingleProject } from "./components/index";
 
 const pageVariants = {
   initial: {

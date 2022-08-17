@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import CLOUDS from "vanta/dist/vanta.clouds.min";
+import React from "react";
 import "./App.css";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import AllRoutes from "./Routes";
 
 const App: React.FC<any> = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./MyProjects.css";
 import { motion } from "framer-motion";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import projectList from "../../ProjectList";
 import { Close } from "../Close/Close";
 import select from "../../sounds/select.mp3";
@@ -10,7 +10,6 @@ import SingleProject from "../SingleProject/SingleProject";
 
 export const MyProjects: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const [currentProject, setCurrentProject]: any = useState(null);
-  const location = useLocation();
   const selectAudio = new Audio(select);
 
   let playWoosh = true;
