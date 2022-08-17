@@ -1,0 +1,80 @@
+#EducationAndWorkContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+#EducationAndWorkInnerContainer {
+  padding: 10px;
+  height: 90%;
+  width: 90%;
+  background-color: rgba(41, 70, 70, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+#EducationAndWorkContainer h1 {
+  text-align: center;
+  font-size: 3em;
+  align-self: center;
+  margin-top: 10px;
+}
+
+#EducationAndWorkContainer h1,
+h2 {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+}
+
+#EducationAndWorkInnerContainer .Info {
+  height: 100%;
+  padding: 10px;
+  align-self: center;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.15);
+  overflow-y: auto;
+}
+
+#EducationAndWorkInnerContainer .Info .Block {
+  margin: 0 10px;
+  max-width: 100%;
+}
+
+#EducationAndWorkInnerContainer .Info .Block h4 {
+  color: rgb(224, 221, 255);
+}
+
+#EducationAndWorkInnerContainer .Info .FlexRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#EducationAndWorkInnerContainer .Info .Block p {
+  margin-left: 10px;
+  color: rgb(240, 240, 240);
+}
+
+#EducationAndWorkInnerContainer .Info .Block a {
+  color: rgb(240, 240, 240);
+}
+
+#EducationAndWork hr {
+  width: 100%;
+  margin: 25px 0px;
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(
+    to left,
+    rgba(117, 117, 117, 0),
+    rgba(117, 117, 117, 0.75),
+    rgba(117, 117, 117, 0)
+  );
+}

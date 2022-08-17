@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme) => ({
   menuLink: {
     textDecoration: "none",
   },
-  moreInfoContainer: {
+  linksContainer: {
     marginLeft: "auto",
   },
   toggleButton: {

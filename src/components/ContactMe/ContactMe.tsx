@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import "./ContactMe.css";
 import { motion } from "framer-motion";
 import axios from "axios";
+import {ThreeDots} from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { Close } from "../Close/Close";
+import select from "../../sounds/select.mp3";
+
 
 export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const [email, setEmail] = useState("");
@@ -12,6 +16,15 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const [thankYou, setThankYou] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const selectAudio = new Audio(select);
+
+  selectAudio.volume = 0.75;
+
+  const playSelect = () => {
+    selectAudio.play();
+  };
+
 
   const handleSubmit = async (evt: any) => {
     evt.preventDefault();
@@ -46,8 +59,8 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
       transition={pageTransition}
     >
       <div id="ContactMeContainer">
-        <h1>Contact Me</h1>
         <div id="ContactMe">
+          <h1>Contact Me</h1>
           {!thankYou && !error && !loading ? (
             <React.Fragment>
               <div className="form">
@@ -55,7 +68,6 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                   <label htmlFor="name">Your Name</label>
                   <input
                     required
-                    placeholder="Required"
                     id="name"
                     type="text"
                     value={name}
@@ -67,7 +79,6 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                   <label htmlFor="email">Your Email</label>
                   <input
                     required
-                    placeholder="Required"
                     id="email"
                     type="email"
                     value={email}
@@ -79,7 +90,6 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                   <label htmlFor="subject">Subject</label>
                   <input
                     required
-                    placeholder="Required"
                     id="subject"
                     type="text"
                     value={subject}
@@ -91,7 +101,6 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                   <label htmlFor="message">Message</label>
                   <textarea
                     required
-                    placeholder="Required"
                     value={message}
                     rows={4}
                     id="message"
@@ -99,6 +108,7 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                       setMessage(evt.target.value);
                     }}
                   ></textarea>
+                  <h4>*All fields are required</h4>
                   {email.length === 0 ||
                   name.length === 0 ||
                   subject.length === 0 ||
@@ -112,23 +122,42 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                       Submit
                     </button>
                   ) : (
-                    <button color="primary" type="submit">
+                    <button color="primary" type="submit" onClick={playSelect}>
                       Submit
                     </button>
                   )}
                 </form>
+                <h3>
+                  Or contact me directly at:{" "}
+                  <a href="mailto:zernst3@live.com">zernst3@live.com</a>
+                </h3>
               </div>
-              <h3>
-                Or contact me directly at:{" "}
-                <a href="mailto:zernst3@live.com">zernst3@live.com</a>
-              </h3>
             </React.Fragment>
           ) : loading ? (
-            <h1>Sending Email...</h1>
+            <div className="page">
+              <ThreeDots
+                color="#F0F0F0"
+                height={100}
+                width={100}
+              />
+              <h2>Sending Email</h2>
+              <ThreeDots
+                color="#F0F0F0"
+                height={100}
+                width={100}
+              />
+            </div>
           ) : thankYou ? (
-            <h1>Thank you for your message!</h1>
+            <div className="page">
+              <h2>Thank you for your message!</h2>
+            </div>
           ) : (
-            <h1>There has been an error</h1>
+            <div className="page">
+              <h2>
+                There has been an error, please contact me directly at:{" "}
+                <a href="mailto:zernst3@live.com">zernst3@live.com</a>
+              </h2>
+            </div>
           )}
         </div>
         <Close />

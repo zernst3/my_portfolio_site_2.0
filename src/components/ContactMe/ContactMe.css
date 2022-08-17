@@ -1,6 +1,5 @@
 #ContactMeContainer {
-  padding: 10px 0px;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   /* justify-content: center; */
@@ -10,40 +9,51 @@
   backdrop-filter: blur(5px);
 }
 
+#ContactMeContainer * {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 #ContactMe {
-  padding: 10px;
   background-color: rgba(41, 70, 70, 0.3);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  width: 95%;
-  height: 95%;
+  width: 90%;
+  height: 90%;
   overflow: auto;
+  padding: 10px;
+  overflow-x: hidden;
 }
 
 #ContactMeContainer h1 {
-  margin: auto;
+  margin: 0;
   font-size: 3em;
   color: rgb(240, 240, 240);
+  align-self: center;
 }
 
-#ContactMe h3 {
-  margin: auto;
+#ContactMeContainer h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 2.5em;
   color: rgb(240, 240, 240);
-  font-family: "Merriweather", serif;
-  font-weight: 100;
-  line-height: 1.5;
+  align-self: center;
+  margin: 0 15px;
 }
 
-#ContactMe h3 a {
-  color: rgb(240, 240, 240);
-  font-family: "Merriweather", serif;
-  font-weight: 100;
-  line-height: 1.5;
+#ContactMe .page {
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
 }
 
 #ContactMe .form {
   margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 #ContactMe .form form {
@@ -85,7 +95,7 @@ textarea {
   background-color: transparent;
   color: rgb(240, 240, 240);
   padding: 10px;
-  margin-bottom: 15px;
+  margin: 15px;
   border-color: rgb(240, 240, 240);
   border-radius: 10px;
   transition: all 0.2s;
@@ -113,4 +123,26 @@ textarea:-webkit-autofill {
 #ContactMe .disabled:hover {
   cursor: not-allowed;
   background-color: rgba(50, 50, 50, 0.5);
+}
+
+#ContactMe h3 {
+  text-align: center;
+  margin: auto;
+  color: rgb(240, 240, 240);
+  font-family: "Merriweather", serif;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+#ContactMe h4 {
+  color: rgb(240, 240, 240);
+  margin: 5px;
+}
+
+#ContactMe h3 a,
+#ContactMe h2 a {
+  color: rgb(240, 240, 240);
+  font-family: "Merriweather", serif;
+  font-weight: 100;
+  line-height: 1.5;
 }
