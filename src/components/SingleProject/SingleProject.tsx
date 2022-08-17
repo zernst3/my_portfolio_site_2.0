@@ -24,7 +24,7 @@ export const SingleProject: React.FC<any> = ({
 
   const wooshAudio = new Audio(woosh);
 
-  wooshAudio.volume = 0.15;
+  wooshAudio.volume = 0.1;
 
   const onClick = () => {
     wooshAudio.play();

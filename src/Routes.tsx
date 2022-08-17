@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, AboutMe, MyProjects, ContactMe, EducationAndWork, NotFound } from "./components";
+import { Home, AboutMe, MyProjects, ContactMe, EducationAndWork, NotFound, StartingScreen } from "./components";
 import { Navigate, Route, Routes, useLocation } from "react-router";
 import { AnimatePresence } from "framer-motion";
 
@@ -31,8 +31,14 @@ const AllRoutes: React.FC<any> = () => {
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        <Route
+      <Route
           path="/"
+          element={
+            <StartingScreen pageTransition={pageTransition} pageVariants={pageVariants} />
+          }
+        />
+        <Route
+          path="/home"
           element={
             <Home pageTransition={pageTransition} pageVariants={pageVariants} />
           }

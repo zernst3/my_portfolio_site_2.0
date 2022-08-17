@@ -105,6 +105,7 @@
   -webkit-text-stroke-width: 1px;
   font-size: 6rem;
   margin: 5px;
+  font-family: Serif, "Times New Roman";
 }
 
 #Home .textContainer h3 {

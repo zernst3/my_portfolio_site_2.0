@@ -3,13 +3,13 @@ import "./Close.css";
 import { useNavigate } from 'react-router-dom';
 import woosh from "../../sounds/woosh2.mp3"
 
-export const Close: React.FC<any> = ({ link = "/" }) => {
+export const Close: React.FC<any> = ({ link = "/home" }) => {
   const navigate = useNavigate();
   const wooshAudio = new Audio(
     woosh
   );
 
-  wooshAudio.volume = 0.15;
+  wooshAudio.volume = 0.1;
 
   const onClick = () => {
     wooshAudio.play();
