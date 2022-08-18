@@ -1,4 +1,4 @@
-h1 {
+#StartingScreenContainer h1 {
   color: rgba(255, 255, 255, 0.5);
   -webkit-text-stroke-color: rgb(240, 240, 240);
   -webkit-text-stroke-width: 1px;
@@ -7,13 +7,13 @@ h1 {
   font-family: Serif, "Times New Roman";
 }
 
-h3 {
+#StartingScreenContainer h3 {
   color: rgb(158, 158, 158);
   font-size: 2rem;
   margin: 5px;
 }
 
-h3:hover {
+#StartingScreenContainer h3:hover {
   cursor: pointer;
 }
 
@@ -26,7 +26,7 @@ h3:hover {
 }
 
 @media only screen and (max-width: 670px) {
-  h1 {
+    #StartingScreenContainer h1 {
     font-size: 3rem;
   }
 }
