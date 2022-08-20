@@ -1,7 +1,7 @@
 #StartingScreenContainer h1 {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(255, 255, 255);
   -webkit-text-stroke-color: rgb(240, 240, 240);
-  -webkit-text-stroke-width: 1px;
+  /* -webkit-text-stroke-width: 1px; */
   font-size: 6rem;
   margin: 5px;
   font-family: Serif, "Times New Roman";

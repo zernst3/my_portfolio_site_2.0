@@ -8,7 +8,7 @@ import select from "../../sounds/select.mp3";
 const Summary: React.FC<any> = () => (
   <div>
     <p>
-      I am a determined and focused software and cloud developer with an
+      I am a determined, focused software and cloud developer with an
       attention to detail and a passion for improving my skills. My education
       began with self-study of the CS50 Introduction to Computer Science course
       offered by Harvard University. I continued with additional self-study and

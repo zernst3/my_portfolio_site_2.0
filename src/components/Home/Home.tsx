@@ -252,7 +252,7 @@ export const Home: React.FC<any> = ({ pageTransition, pageVariants }) => {
                   strings={[
                     "Cloud Developer",
                     "Microsoft Azure Certified",
-                    "Javascript, C# and Python",
+                    "Javascript, Python and C#",
                     "React, Node and Dotnet",
                     "SQL and MongoDB",
                     "and more...",
