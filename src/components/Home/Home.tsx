@@ -65,7 +65,6 @@ export const Home: React.FC<any> = ({ pageTransition, pageVariants }) => {
   selectAudio.volume = 0.45;
 
   const playSelect = () => {
-    
     selectAudio.play();
   };
 
@@ -105,9 +104,9 @@ export const Home: React.FC<any> = ({ pageTransition, pageVariants }) => {
                     key={idx}
                     onClick={() => {
                       playWoosh = false;
-                      playSelect()
+                      playSelect();
                     }}
-                    onMouseEnter={() => setTimeout(playWoosh3,5)}
+                    onMouseEnter={() => setTimeout(playWoosh3, 5)}
                   >
                     <ListItem>
                       <ListItemIcon className={"listItem"}>
@@ -128,11 +127,13 @@ export const Home: React.FC<any> = ({ pageTransition, pageVariants }) => {
             <div className="links">
               <div className={"navbarItem"}>
                 <ListItem>
-                  <IconButton onClick={(event) => {
-                    playWoosh = false;
-                    handleClick(event)
-                  }
-                    } value="links">
+                  <IconButton
+                    onClick={(event) => {
+                      playWoosh = false;
+                      handleClick(event);
+                    }}
+                    value="links"
+                  >
                     <ListItemIcon>
                       <InfoIcon />
                     </ListItemIcon>
@@ -140,7 +141,7 @@ export const Home: React.FC<any> = ({ pageTransition, pageVariants }) => {
                       primary={"Links"}
                       onClick={() => {
                         playWoosh = false;
-                        playSelect()
+                        playSelect();
                       }}
                       onMouseEnter={() => setTimeout(playWoosh3, 5)}
                     />

@@ -40,6 +40,8 @@
   color: rgb(240, 240, 240);
   align-self: center;
   margin: 0 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 #ContactMe .page {
@@ -132,6 +134,8 @@ textarea:-webkit-autofill {
   font-family: "Merriweather", serif;
   font-weight: 100;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
 }
 
 #ContactMe h4 {
@@ -145,4 +149,6 @@ textarea:-webkit-autofill {
   font-family: "Merriweather", serif;
   font-weight: 100;
   line-height: 1.5;
+  display: flex;
+  flex-direction: row;
 }

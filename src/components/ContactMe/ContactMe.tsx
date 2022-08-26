@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "./ContactMe.css";
 import { motion } from "framer-motion";
 import axios from "axios";
-import {ThreeDots} from "react-loader-spinner";
+import { ThreeDots } from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { Close } from "../Close/Close";
 import select from "../../sounds/select.mp3";
 
+import { PhoneAndroid, AlternateEmail } from "@material-ui/icons";
 
 export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const [email, setEmail] = useState("");
@@ -24,7 +25,6 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
   const playSelect = () => {
     selectAudio.play();
   };
-
 
   const handleSubmit = async (evt: any) => {
     evt.preventDefault();
@@ -128,24 +128,25 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
                   )}
                 </form>
                 <h3>
-                  Or contact me directly at:{" "}
-                  <a href="mailto:zernst3@live.com">zernst3@live.com</a>
+                  Or contact me directly at:
+                  <a target="_blank" rel="noreferrer" href="Tel: 202-780-5495">
+                    <PhoneAndroid /> (202) 780-5495
+                  </a>
+                  <a
+                    href="mailto:zernst3@live.com"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <AlternateEmail /> zernst3@live.com
+                  </a>
                 </h3>
               </div>
             </React.Fragment>
           ) : loading ? (
             <div className="page">
-              <ThreeDots
-                color="#F0F0F0"
-                height={100}
-                width={100}
-              />
+              <ThreeDots color="#F0F0F0" height={100} width={100} />
               <h2>Sending Email</h2>
-              <ThreeDots
-                color="#F0F0F0"
-                height={100}
-                width={100}
-              />
+              <ThreeDots color="#F0F0F0" height={100} width={100} />
             </div>
           ) : thankYou ? (
             <div className="page">
@@ -154,8 +155,17 @@ export const ContactMe: React.FC<any> = ({ pageTransition, pageVariants }) => {
           ) : (
             <div className="page">
               <h2>
-                There has been an error, please contact me directly at:{" "}
-                <a href="mailto:zernst3@live.com">zernst3@live.com</a>
+                There has been an error, please contact me directly instead:
+                <a target="_blank" rel="noreferrer" href="Tel: 202-780-5495">
+                    <PhoneAndroid /> (202) 780-5495
+                  </a>
+                  <a
+                    href="mailto:zernst3@live.com"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <AlternateEmail /> zernst3@live.com
+                  </a>
               </h2>
             </div>
           )}
